@@ -793,7 +793,7 @@ The above copyright notice and this permission notice shall be included in all c
             else{
               btnstatus2="Activate"
             }
-            document.getElementById("runningdata").innerHTML+='<tr><td>'+data+'</td><td>'+status+'</td><td><input type="text" id="num'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updatepriority("'+i+'","num'+i+'")></i></td><td><button type="submit" onclick=updateStatus("'+i+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus2+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="remove('+i+')">delete</i></button></td></tr>'
+            document.getElementById("runningdata").innerHTML+='<tr><td>'+data+'</td><td>'+status+'</td><td><input type="text" id="num'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateRunningTxt("'+i+'","num'+i+'")></i></td><td><button type="submit" onclick=updateStatus("'+i+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus2+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="remove('+i+')">delete</i></button></td></tr>'
         
           }
         }else{
@@ -882,14 +882,14 @@ The above copyright notice and this permission notice shall be included in all c
 
         }
       }
-      function updatepriority(index,value){
+      function updateRunningTxt(index,value){
         k=key[index];
-        var answer=window.confirm("Are you sure, you want to change the priority?")
+        var answer=window.confirm("Are you sure, you want to change the text?")
         p=value
-        Priority=document.querySelector('#'+p).value;
-        if(answer && Priority.trim()!="")
+        Data=document.querySelector('#'+p).value;
+        if(answer && Data.trim()!="")
         {
-          firebase.database().ref("RunningText").child(k).update({Priority});
+          firebase.database().ref("RunningText").child(k).update({Data});
 
         }
       }
