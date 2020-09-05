@@ -52,6 +52,14 @@ header.page-header{
   	font-weight: bolder;
   	text-transform: initial;
 }
+.highlight-texts{
+
+  	font-family: futu;
+  	font-size: 1em;
+  	font-style:cursive;
+  	font-weight: bolder;
+  	text-transform: initial;
+}
 .page-title{
 	position: relative;
 	z-index: 1;
