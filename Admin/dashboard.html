@@ -297,6 +297,8 @@ The above copyright notice and this permission notice shall be included in all c
                       <table class="table">
                         <thead class="text-warning" >
                           <th>Image</th>
+                          <th>Text</th>
+                          <th>Edit Text</th>
                           <th>Status</th>
                           <th>Edit Status</th>
                           <th>Delete</th>
@@ -731,13 +733,14 @@ The above copyright notice and this permission notice shall be included in all c
             k=keys[i];
             urls =sc[k].Image;
             status =sc[k].Status;
+            var data=sc[k].SliderData
             if(status == "Active"){
               btnstatus="Hide"
             }
             else{
               btnstatus="Activate"
             }
-            document.getElementById("sliderdata").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td>'+status+'</td><td><button type="submit" onclick="updateSlider('+i+')" style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="removeslider('+i+')">delete</i></button></td></tr>'
+            document.getElementById("sliderdata").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td>'+data+'</td><td><input type="text" id="txtd'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updatetext("'+k+'","txtd'+i+'")></i></td><td>'+status+'</td><td><button type="submit" onclick="updateSlider('+i+')" style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="removeslider('+i+')">delete</i></button></td></tr>'
         
           }
         }else{
@@ -888,6 +891,20 @@ The above copyright notice and this permission notice shall be included in all c
         if(answer && Priority.trim()!="")
         {
           firebase.database().ref("RunningText").child(k).update({Priority});
+
+        }
+      }
+      function updatetext(key,value){
+       
+
+        var answer=window.confirm("Are you sure, you want to change the text?")
+        p=value
+
+        SliderData=document.querySelector('#'+p).value;
+
+        if(answer && SliderData.trim()!="")
+        {
+          firebase.database().ref("SliderImages").child(key).update({SliderData});
 
         }
       }
