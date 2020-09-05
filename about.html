@@ -467,6 +467,9 @@ footer .glyphicon {
                 document.querySelector("body").style.visibility = "visible"; 
             } 
         }; 
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.collapse').collapse('hide');
+        }); 
         var firebaseConfig = {
             apiKey: "AIzaSyBGnkLNGCt53P_TmBsfezid52nTYVIdFvU",
             authDomain: "svfcweb.firebaseapp.com",

@@ -660,7 +660,10 @@
                 document.querySelector("#loader").style.display = "none"; 
                 document.querySelector("body").style.visibility = "visible"; 
             } 
-        }; 
+        };
+        $('.navbar-nav>li>a').on('click', function(){
+            $('.collapse').collapse('hide');
+        }); 
         var janelaPopUp = new Object();
         janelaPopUp.abre = function(id, classes, titulo, corpo, functionCancelar, functionEnviar, textoCancelar, textoEnviar){
             var cancelar = (textoCancelar !== undefined)? textoCancelar: 'Cancel';
