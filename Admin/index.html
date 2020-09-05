@@ -590,7 +590,7 @@
       let ref5= firebase.database().ref('Enquiry');
       var storageService = firebase.storage();
       var key,keys=null;
-      var sc,sc2=null;
+      var sc,sc2=null,sc3,sc4;
       ref.on('value',gotData,errData);
       ref2.on('value',marquee,errData);
       ref3.on('value',Programme,errData);
@@ -599,16 +599,16 @@
       function Programme(data){
           var btnstatus;
         
-          sc=data.val();
-          if(sc!=null){
-            keys=Object.keys(sc);
+          sc3=data.val();
+          if(sc3!=null){
+            keys=Object.keys(sc3);
             $('#programme').empty();
             for(var i=0;i<keys.length;i++){          
               k=keys[i];
-              urls =sc[k].Image;
+              urls =sc3[k].Image;
 
-              status =sc[k].Status;
-              name=sc[k].Name
+              status =sc3[k].Status;
+              name=sc3[k].Name
               if(status == "Active"){
                 btnstatus="Hide"
               }
@@ -682,14 +682,14 @@
       function Recruiters(data){
         var btnstatus;
       
-        sc=data.val();
-        if(sc!=null){
-          keys=Object.keys(sc);
+        sc4=data.val();
+        if(sc4!=null){
+          keys=Object.keys(sc4);
           $('#recruiters').empty();
           for(var i=0;i<keys.length;i++){          
             k=keys[i];
-            urls =sc[k].Image;
-            status =sc[k].Status;
+            urls =sc4[k].Image;
+            status =sc4[k].Status;
             if(status == "Active"){
               btnstatus="Hide"
             }
@@ -756,8 +756,7 @@
       function updateProgramme(key){
         var Status=""
         var popuptxt;
-        
-        origstatus =sc[key].Status;
+        origstatus =sc3[key].Status;
         if(origstatus=="Active"){
           Status="Hidden"
           popuptxt="Hide"
@@ -777,7 +776,7 @@
         var Status=""
         var popuptxt;
         
-        origstatus =sc[key].Status;
+        origstatus =sc4[key].Status;
         if(origstatus=="Active"){
           Status="Hidden"
           popuptxt="Hide"
