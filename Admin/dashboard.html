@@ -313,8 +313,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <thead class="text-warning" >
                           <th>Text</th>
                           <th>Status</th>
-                          <th>Priority</th>
-                          <th>Edit Priority</th>
+                          <th>Edit Text</th>
                           <th>Edit Status</th>
                           <th>Delete</th>
                         </thead>
@@ -794,7 +793,7 @@ The above copyright notice and this permission notice shall be included in all c
             else{
               btnstatus2="Activate"
             }
-            document.getElementById("runningdata").innerHTML+='<tr><td>'+data+'</td><td>'+status+'</td><td>'+priority+'</td><td><input type="number" id="num'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updatepriority("'+i+'","num'+i+'")></i></td><td><button type="submit" onclick=updateStatus("'+i+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus2+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="remove('+i+')">delete</i></button></td></tr>'
+            document.getElementById("runningdata").innerHTML+='<tr><td>'+data+'</td><td>'+status+'</td><td><input type="text" id="num'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updatepriority("'+i+'","num'+i+'")></i></td><td><button type="submit" onclick=updateStatus("'+i+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus2+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="remove('+i+')">delete</i></button></td></tr>'
         
           }
         }else{
