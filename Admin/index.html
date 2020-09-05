@@ -1,754 +1,926 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Businnes, Portfolio, Corporate"> 
-	<meta name="Author" content="WebThemez"> 
-    <title>Digi School Bootstrap4 Website Template</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="elegant_font/style.css" />
-    <!--[if lte IE 7]><script src="elegant_font/lte-ie7.js"></script><![endif]-->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/slider-pro.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
-    <link rel="stylesheet" href="css/animate.css">
-	    <link rel="stylesheet" href="elegant_font/style.css"> 
-    <link rel="stylesheet" href="css/style.css"> 
-
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-        <script type="text/javascript" src="js/selectivizr.js"></script>
-    <![endif]-->
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    SVFC | ADMIN
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
+<style type="text/css">
+  select{
+    border:2px solid black;
+    padding:5px;
+    border-radius: 5px;
+  }
+  th{
+    font-size: 0.4em;
+  }
+</style>
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
 
-<body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="status"></div>
-    </div>
- 
-    <!-- Header End -->
-    <header>
-        <!-- Navigation Menu start-->
-		
-	<nav id="topNav" class="navbar navbar-default main-menu">
-    <div class="container">
-        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-            ☰
-        </button> 
-		 <a class="navbar-brand page-scroll" href="#slider"><img class="logo" id="logo" src="images/logo.png" alt="logo"></a>
-        <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
-            <ul class="nav navbar-nav">
-                 <li class="active">
-                            <a href="#slider">HOME</a>
-                        </li>
-                        <li>
-                            <a href="#about">ABOUT</a>
-                        </li>
-						 <li>
-                            <a href="#services">Courses</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">Gallery</a>
-                        </li>
-                       
-                        <li>
-                            <a href="#pricing">PRICING</a>
-                        </li>
-						
-                        <li>
-                            <a href="#team">TEAM</a>
-                        </li> 
-                        <li>
-                            <a href="#contact">CONTACT US</a>
-                        </li>
-            </ul> 
-        </div>
-    </div>
-</nav>
-
+      <div class="logo"><a href="index.html" class="simple-text logo-normal">
+          <img src="../images/logo.png">
+          <h5 style="font-family: futu;font-size: 0.8em">Sai Vidya First Grade College</h5>
+        </a></div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          
+          <li class="nav-item active  ">
+            <a class="nav-link" href="./index.html">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./adminabout.html">
+              <i class="material-icons">person</i>
+              <p>About Section</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./sliderDynamic.html">
+              <i class="material-icons">content_paste</i>
+              <p>Add Slider Images</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./running.html">
+              <i class="material-icons">content_paste</i>
+              <p>Running Text</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./programme.html">
+              <i class="material-icons">library_books</i>
+              <p>Programme</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./recruiters.html">
+              <i class="material-icons">bubble_chart</i>
+              <p>Recruiters</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./facility.html">
+              <i class="material-icons">location_ons</i>
+              <p>Facility</p>
+            </a>
+          </li>
         
-    </header>
-    <!-- Header End -->
-
-
-    <section class="slider-pro slider" id="slider">
-        <div class="sp-slides">
-
-            <!-- Slides -->
-            <div class="sp-slide main-slides">
-                <div class="img-overlay"></div>
-
-                <img class="sp-image" src="images/slider/slider-img-1.jpg" alt="Slider 1"/>
-                <div class="caption">
-					<h1 class="sp-layer slider-text-big"
-					data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-					<span class="highlight-texts">Above and Beyond!</span>
-					</h1> 
-					<p class="sp-layer"
-					data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit
-					</p>
-				</div>
-            </div>
-            <!-- Slides End -->
-
-            <!-- Slides -->
-            <div class="sp-slide main-slides">
-            <div class="img-overlay"></div>
-                <img class="sp-image" src="images/slider/slider-img-2.jpg" alt="Slider 2"/>
-                <div class="caption">
-                <h1 class="sp-layer slider-text-big"
-                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-                <span class="highlight-texts">Early Learning</span>
-                </h1>
-
-                <p class="sp-layer"
-                data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                </p>
-				</div>
-            </div>
-            <!-- Slides End -->
-
-            <!-- Slides -->
-            <div class="sp-slide main-slides">
-                <div class="img-overlay"></div>
-
-                <img class="sp-image" src="images/slider/slider-img-3.jpg" alt="Slider 3"/>
-				<div class="caption">
-                <h1 class="sp-layer slider-text-big"
-                data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-                <span class="highlight-texts">Right Experiences</span>
-                </h1>
-
-                <p class="sp-layer"
-                data-position="center" data-vertical="15%" data-show-delay="2000" data-hide-delay="200" data-show-transition="left" data-hide-transition="right">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                </p>
-				</div>
-            </div>
-            <!-- Slides End -->
-
-        </div>
-    </section>
-    <!-- Main Slider End -->
-
-
-    <section id="about" class="about-sec section-wrapper description">
-        <div class="container">
-            <div class="row">
-                <!-- Section Header -->
-                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">About</span></h2>
-                   
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
-                </div>
-                <!-- Section Header End -->
-
-                <div class="col-md-6 col-sm-6 col-xs-12 custom-sec-img wow fadeInDown">
-                    <img src="images/features.png" alt="Custom Image">
-                </div>
-
-                <div class="col-md-6 col-sm-6 col-xs-12 customized-text wow fadeInDown black-ed">
-				<p>Lorem ipsum dolor sit amet, consec tetur adipisi cing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum  ipsum.  lobcaecati ea maiores totam nostrum, ad iure rerum quas harum ipsum. Rem ea ducimus quos quae quo.</p>
-                    <div class="row"> 
-                        <div class="col-md-11">
-                            <strong>Skill Central</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iusto, natus est ducimus saepe laborum</p>
-                        </div>
-                    </div>
-                    <div class="row"> 
-                        <div class="col-md-11">
-                            <strong>Active Central</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iusto, natus est ducimus saepe laborum Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                    <div class="row"> 
-                        <div class="col-md-11">
-                            <strong>Growth Central</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iusto, natus est ducimus saepe laborum Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>
-    </section> 
-  
-    <section id="services" class="section-wrapper">
-        <div class="container">
-            <div class="row">
-
-                <!-- Section Header -->
-                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">Courses</span></h2>
-                   
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
-                </div>
-                <!-- Section Header End -->
- 
-                <div class="our-services">
-			 
-		
-		 <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-						<div class="service-box">
-						<img src="images/img01.png" alt="Custom Image">
-                            <div class="icon">
-                                <i class="icon_cone"></i> <h3>Play Group</h3>
-                            </div> 
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisi cing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum  </p>
-							<a href="#contact" class="btn">Apply Now</a>
-							</div> 
-</div>
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-						<div class="service-box">
-						<img src="images/img02.png" alt="Custom Image">
-                            <div class="icon">
-                                <i class="icon_mug"></i><h3>Nursery </h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisi cing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum  </p>
-							<a href="#contact" class="btn">Apply Now</a>
-                        </div>
-</div>
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".2s">
-						<div class="service-box">
-						<img src="images/img03.png" alt="Custom Image">
-                            <div class="icon">
-                                <i class="icon_currency"></i><h3>Primery I</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisi cing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum  </p>
-							<a href="#contact" class="btn">Apply Now</a>
-                        </div>
-</div>
-                     
-                    </div> 
-                    <div class="row">
-                     
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".1s">
-						<div class="service-box">
-						<img src="images/img04.png" alt="Custom Image">
-                            <div class="icon">
-                                <i class="icon_star-half_alt"></i><h3>Primery II</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisi cing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum  </p>
-							<a href="#contact" class="btn">Apply Now</a>
-                        </div>
-</div>
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".1s">
-						<div class="service-box">
-						<img src="images/img05.png" alt="Custom Image">
-                            <div class="icon">
-                                <i class="icon_music"></i><h3>Computers</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisi cing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum  </p>
-							<a href="#contact" class="btn">Apply Now</a>
-                        </div>
-</div>
-                        <div class="col-md-4 col-sm-4 col-xs-12 text-xs-center wow fadeInDown" data-wow-delay=".1s">
-						<div class="service-box">
-						<img src="images/img06.png" alt="Custom Image">
-                            <div class="icon">
-                                <i class="icon_cog"></i><h3>Games</h3>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisi cing elit. Ipsa sit, numquam amet voluptatibus obcaecati ea maiores totam nostrum, ad iure rerum quas harum  </p>
-							<a href="#contact" class="btn">Apply Now</a>
-                        </div>
-</div>
-                    </div>
-                </div> 
-
-            </div>
-        </div>
-    </section> 
-
-
-
-    <section id="portfolio" class="bgSection portfolio-section">
-        <div class="container">
-            <div class="row">
-
-                <!-- Section Header -->
-                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">Gallery</span></h2>
-                   
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
-                </div>
-                <!-- Section Header End -->
-
-            </div>
-        </div>
-
-        <!-- Works -->
-        <div class="portfolio-works wow fadeIn" data-wow-duration="2s">
-
-            <!-- Filter Button Start -->
-            <div id="portfolio-filter" class="portfolio-filter-btn-group">
-                <ul>
-                    <li>
-                        <a href="#" class="selected" data-filter="*">All</a><!--
-                         --><a href="#" data-filter=".web">Annual Day</a><!--
-                         --><a href="#" data-filter=".seo">Competitions</a><!--
-                         --><a href="#" data-filter=".works">Events</a><!--
-                         --><a href="#" data-filter=".brands">Tech Day</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Filter Button End -->
-
-            <div class="portfolio-items">
-
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item web seo">
-
-                    <img src="images/img-portfolio/portfolio1.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio1.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item works seo">
-
-                    <img src="images/img-portfolio/portfolio2.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio2.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item web">
-
-                    <img src="images/img-portfolio/portfolio3.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio3.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item web works brands">
-
-                    <img src="images/img-portfolio/portfolio4.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio4.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Items -->
-
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item web brands">
-
-                   <img src="images/img-portfolio/portfolio5.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio5.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item works seo">
-
-                    <img src="images/img-portfolio/portfolio6.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio6.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <div class="item portfolio-item brands seo">
-
-                    <img src="images/img-portfolio/portfolio1.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio7.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item portfolio-item web seo works">
-
-                    <img src="images/img-portfolio/portfolio2.jpg" alt="">
-                    <div class="portfolio-details-wrapper">
-                        <div class="portfolio-details">
-                            <div class="portfolio-meta-btn">
-                                <ul class="work-meta">
-                                    <li class="lighbox"><a href="images/img-portfolio/portfolio8.jpg" class="featured-work-img"><i class="fa fa-search-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
- 
-                
-
-            </div>
-        </div>
-        <!-- Works End -->
-
-
-    </section>
-    <!-- Portfolio Section End -->
-
-
-<section id="info" class="info-section">
-<div class="container text-xs-center">
-         <!-- Section Header -->
-                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">Stats</span></h2>
-                   
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
-                </div>
-                <!-- Section Header End -->
-        <div class="row wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-            <div class="col-md-3 col-sm-6 col-xs-12 text-xs-center">
-                
-                <i class="icon_mic_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
-                <h4>Margins</h4>
-				<h1 class="text-primary">100,000</h1>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-xs-center">
-                
-                <i class="icon_gift_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
-                <h4>Completed</h4>
-				<h1 class="text-primary">34201</h1>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-xs-center">
-              
-                <i class="icon_mobile wow pulse" style="visibility: visible; animation-name: pulse;"></i>
-  <h4>Projects</h4>               
-			   <h1 class="text-primary">152</h1>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 text-xs-center">
-               
-                <i class="icon_lightbulb_alt wow pulse" style="visibility: visible; animation-name: pulse;"></i>
- <h4>Customers</h4>               
-			   <h1 class="text-primary">56500</h1>
-            </div>
-        </div> 
-    </div>
-</section>
-
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <div class="row">
-
-                <!-- Section Header -->
-                <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">Fee Structure</span></h2>
-                   
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
-                </div>
-                <!-- Section Header End -->
-
-                <div class="pricing-wrapper">
-
-                    <!-- Plans -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 pricing-plans wow bounceInLeft hoverer">
-                        <div class="pricing-titles">
-                            <h2>Nursery</h2>
-                            <p><span>$1600/</span>Year</p>
-                        </div>
-                        <div class="pricing-service-name">
-                            <ul>
-                                <li>Oral work </li>
-                                <li>Written work </li> 
-								 <li>Competitions</li>
-                                <li>24/7 Day Care</li>
-                            </ul>
-                        </div>
-
-                         <div class="bg-btn">
-                            <a href="#" class="signup-btn">Enroll</a>
-                        </div>
-                    </div>
-                    <!-- Plans End -->
-
-                    <!-- Plans -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 pricing-plans wow fadeInUp hoverer" data-wow-duration="1s">
-                        <div class="pricing-titles">
-                            <h2>PP I</h2>
-                            <p><span>$6900/</span>Year</p>
-                        </div>
-                        <div class="pricing-service-name">
-                            <ul>
-                               <li>Oral work </li>
-                                <li>Written work </li> 
-                                <li>Games</li> 
-                                <li>24/7 Day Care</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-btn">
-                            <a href="#" class="signup-btn">Enroll</a>
-                        </div>
-                    </div>
-                    <!-- Plans End -->
-
-                    <!-- Plans -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 pricing-plans wow bounceInRight hoverer">
-                        <div class="pricing-titles">
-                            <h2>PP II</h2>
-                            <p><span>$9900/</span>Year</p>
-                        </div>
-                        <div class="pricing-service-name">
-                             <ul>
-                                <li>Oral work </li>
-                                <li>Written work </li>
-                                <li>Patterns</li> 
-								 <li>Competitions</li> 
-                            </ul>
-                        </div>
-                        <div class="bg-btn">
-                            <a href="#" class="signup-btn">Enroll</a>
-                        </div>
-
-                        
-                    </div>
-                    <!-- Plans End -->
-
-                </div>
-            </div>
-        </div> 
-    </section>
-    <!-- Pricing End -->
-
-
-
-
-<section id="team" class="bgSection teams-section"> 
-<div class="parallax-overlay"></div>
-        <div class="teams-wrapper wow bounceIn">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Section Header -->
-                    <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                        <h2><span class="highlight-text-inverted">Team</span></h2>
-                       
-                        <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
-                    </div>
-
-                    <!-- teams Slider -->
-                    <div id="teams" class="owl-carousel teams">
-
-                        <!-- Slides -->
-                        <div class="teams-slides col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
-                            <img src="images/img-teams/team1.jpg" alt="">
-							<p class="client-info">Chris Willam</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic</p>
-                            
-                        </div>
-                        <!-- Slides End -->
-
-                        <!-- Slides -->
-                        <div class="teams-slides col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
-                            <img src="images/img-teams/team2.jpg" alt="">
-							<p class="client-info">Randy Dode</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic</p>
-                            
-                        </div>
-                        <!-- Slides End -->
-
-                        <!-- Slides -->
-                        <div class="teams-slides col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
-                            <img src="images/img-teams/team3.jpg" alt="">
-							 <p class="client-info">Michel Kimte</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisic</p>
-                           
-                        </div>
-                        <!-- Slides End -->
-
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </section> 
-
-	 <section id="contact" class="section-wrapper contact-section" data-stellar-background-ratio="0.5">
-    <div class="parallax-overlay"></div>
-        <div class="container">
-            <div class="row">
-
-                <!-- Section Header -->
-              <div class="col-md-12 col-sm-12 col-xs-12 section-header wow fadeInDown">
-                    <h2><span class="highlight-text">Contact Us</span></h2>
-                   
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">We love feedback. Fill out the form below and we'll get back to you as soon as possible. in minus distinctio dolores ipsam.</p>
-                </div> 
-                <!-- Section Header End -->
-
-                <div class="contact-details">
- 
-
-                    <!-- Contact Form -->
-                    <div class="contact-form wow bounceInRight"> 
-                
-       	<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-		<form name="sentMessage" id="contactForm"  novalidate>  
-		 <div class="col-md-6">
-		<input type="text" class="form-control" 
-		placeholder="Full Name" id="name" required
-		data-validation-required-message="Please enter your name" />
-		<p class="help-block"></p>
-		</div> 	
-		 <div class="col-md-6">
-		<input type="email" class="form-control" placeholder="Email" 
-		id="email" required
-		data-validation-required-message="Please enter your email" />
-		</div> 	
- 
-		<div class="col-md-12">
-		<textarea rows="10" cols="100" class="form-control" 
-		placeholder="Message" id="message" required
-		data-validation-required-message="Please enter your message" minlength="5" 
-		data-validation-minlength-message="Min 5 characters" 
-		maxlength="999" style="resize:none"></textarea>
-		</div> 	
-		 
-		<div class="col-md-4 col-md-offset-5"><br><div id="success"> </div><button type="submit" class="btn btn-primary">Submit Message</button></div> 
-		</form>
+        </ul>
       </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="javascript:;">Dashboard</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <form class="navbar-form">
+              
+            </form>
+            <ul class="navbar-nav">
+              
+              <li class="nav-item dropdown">
+                
+                
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Account
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">content_copy</i>
+                  </div>
+                  <p class="card-category">Used Space</p>
+                  <h3 class="card-title">49/50
+                    <small>GB</small>
+                  </h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons text-danger">warning</i>
+                    <a href="javascript:;">Get More Space...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">store</i>
+                  </div>
+                  <p class="card-category">Revenue</p>
+                  <h3 class="card-title">$34,245</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">date_range</i> Last 24 Hours
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-danger card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">info_outline</i>
+                  </div>
+                  <p class="card-category">Fixed Issues</p>
+                  <h3 class="card-title">75</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">local_offer</i> Tracked from Github
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                    <i class="fa fa-twitter"></i>
+                  </div>
+                  <p class="card-category">Followers</p>
+                  <h3 class="card-title">+245</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">update</i> Just Updated
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-primary">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <span class="nav-tabs-title">Tasks:</span>
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#profile" data-toggle="tab">
+                            <i class="material-icons"></i>Manage Slider
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#messages" data-toggle="tab">
+                            <i class="material-icons"></i> Manage Running Text 
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#programmeh" data-toggle="tab">
+                            <i class="material-icons"></i>Active Programme'S
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#recruitersh" data-toggle="tab">
+                            <i class="material-icons"></i>Active Recruiter'S
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="profile">
+                      <table class="table">
+                        <thead class="text-warning" >
+                          <th>Image</th>
+                          <th>Text</th>
+                          <th>Edit Text</th>
+                          <th>Status</th>
+                          <th>Edit Status</th>
+                          <th>Delete</th>
+                        </thead>
+                        <tbody id="sliderdata">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane" id="messages">
+                      <table class="table">
+                        <thead class="text-warning" >
+                          <th>Text</th>
+                          <th>Status</th>
+                          <th>Edit Text</th>
+                          <th>Edit Status</th>
+                          <th>Delete</th>
+                        </thead>
+                        <tbody id="runningdata">
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane " id="recruitersh">
+                      <table class="table">
+                        <thead class="text-warning" >
+                          <th>Image</th>
+                          <th>Status</th>
+                          <th>Edit Status</th>
+                          <th>Delete</th>
+                        </thead>
+                        <tbody id="recruiters">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane " id="programmeh">
+                      <table class="table">
+                        <thead class="text-warning" >
+                          <th>Image</th>
+                          <th>Name</th>
+                          <th>Status</th>
+                          <th>Edit Status</th>
+                          <th>Delete</th>
+                        </thead>
+                        <tbody id="programme">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header card-header-warning">
+                  <h4 class="card-title">Enquiry Stats</h4>
+                </div>
+                <div class="card-body table-responsive">
+                  <table class="table table-hover">
+                    <thead class="text-warning">
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone Num.</th>
+                      <th>Address</th>
+                      <th>Message</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </thead>
+                    <tbody id="enquirytbl">
+                     
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="material-icons">favorite</i> by
+            <a href="https://www.creative-tim.com" target="_blank">Reetik chitragupt</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
  
-            </div>
-        </div>
-    </section>
-	
-	
-	
-	
-    <!-- Contact Section End -->
-    <section class="footer-container">
-        <div class="container">
-            <div class="row footer-containertent">
-                <div class="col-md-4">
-                    <img src="images/logo.png" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et porro quos iste ratione doloribus asperiores, error omnis delectus rerum sapiente. Et, aliquam modi beatae quae in perferendis ab est fugiat!</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>News & Updates</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
-                </div>
-                <div class="col-md-4 contac-us">
-                    <h4>Contact Us</h4>
-                    <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
-					<ul>
-                            <li><i class="fa fa-home"></i>123 New Venu Street</li>
-                            <li><i class="fa fa-phone"></i>001 123 12345 99</li>
-                            <li><i class="fa fa-envelope-o"></i>support@website.com</li>
-                        </ul> 
-                </div>
-            </div>
-        </div>
-    </section>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
 
 
-    <footer>
+          var new_image = $(this).find("img").attr('src');
 
-        <div class="container">
-            <div class="row">
-                <div class="footer-containertent">
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
 
-                    <ul class="footer-social-info">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                        </li>
-                    </ul>
-					<br/><br/>
-					<p>Copyright © 2018. <a href="https://webthemez.com/tag/free" target="_blank">Free Website Template</a> by WebThemez. </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer End -->
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
 
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/modernizr.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/jquery.easypiechart.js"></script>
-	<script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/jquery.fitvids.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.nav.js"></script>
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/smooth-scroll.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/jquery.sliderPro.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="contact/jqBootstrapValidation.js"></script>
-	<script src="contact/contact_me.js"></script>
-	<script src="js/custom.js"></script>
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
 
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      md.initDashboardPageCharts();
+
+    });
+  </script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script>
+
+  <script type="text/javascript">
+    
+      var keys;
+     // Your web app's Firebase configuration
+      var firebaseConfig = {
+          apiKey: "AIzaSyBGnkLNGCt53P_TmBsfezid52nTYVIdFvU",
+          authDomain: "svfcweb.firebaseapp.com",
+          databaseURL: "https://svfcweb.firebaseio.com",
+          projectId: "svfcweb",
+          storageBucket: "svfcweb.appspot.com",
+          messagingSenderId: "999855456006",
+          appId: "1:999855456006:web:c12afd817a3ee49672a887"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      // Initialize Firebase
+ 
+
+      let ref= firebase.database().ref('SliderImages');
+      let ref2= firebase.database().ref('RunningText');
+      let ref3= firebase.database().ref('Programme');
+      let ref4= firebase.database().ref('Recruiters');
+      let ref5= firebase.database().ref('Enquiry');
+      var storageService = firebase.storage();
+      var key,keys=null;
+      var sc,sc2=null;
+      ref.on('value',gotData,errData);
+      ref2.on('value',marquee,errData);
+      ref3.on('value',Programme,errData);
+      ref4.on('value',Recruiters,errData);
+      ref5.on('value',showEnquiry,errData);
+      function Programme(data){
+          var btnstatus;
+        
+          sc=data.val();
+          if(sc!=null){
+            keys=Object.keys(sc);
+            $('#programme').empty();
+            for(var i=0;i<keys.length;i++){          
+              k=keys[i];
+              urls =sc[k].Image;
+
+              status =sc[k].Status;
+              name=sc[k].Name
+              if(status == "Active"){
+                btnstatus="Hide"
+              }
+              else{
+                btnstatus="Activate"
+              }
+              document.getElementById("programme").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td>'+name+'</td><td>'+status+'</td><td><button type="submit" onclick=updateProgramme("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick=removeProgramme("'+k+'")>delete</i></button></td></tr>'
+          
+            }
+          }else{
+            
+            document.getElementById("programme").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
+          }
+        }
+      
+      function gotData(data){
+        var btnstatus;
+      
+        sc=data.val();
+        if(sc!=null){
+          keys=Object.keys(sc);
+          $('#sliderdata').empty();
+          for(var i=0;i<keys.length;i++){          
+            k=keys[i];
+            urls =sc[k].Image;
+            status =sc[k].Status;
+            var data=sc[k].SliderData
+            if(status == "Active"){
+              btnstatus="Hide"
+            }
+            else{
+              btnstatus="Activate"
+            }
+            document.getElementById("sliderdata").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td>'+data+'</td><td><input type="text" id="txtd'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updatetext("'+k+'","txtd'+i+'")></i></td><td>'+status+'</td><td><button type="submit" onclick="updateSlider('+i+')" style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="removeslider('+i+')">delete</i></button></td></tr>'
+        
+          }
+        }else{
+          
+          document.getElementById("sliderdata").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
+        }
+      }
+      function showEnquiry(data){
+        var btnstatus;
+      
+        sc=data.val();
+        if(sc!=null){
+          keys=Object.keys(sc);
+          $('#enquirytbl').empty();
+          for(var i=0;i<keys.length;i++){          
+            k=keys[i];
+            Name =sc[k].Name;
+            status =sc[k].Status;
+            var msg=sc[k].Message;
+            var email=sc[k].Email;
+            var num=sc[k].Number;
+            var add=sc[k].Address
+            if(status == "Active"){
+              btnstatus="Completed"
+            }
+            else{
+              btnstatus="Activatex`"
+            }
+            document.getElementById("enquirytbl").innerHTML+='<tr><td>'+Name+'</td><td><a href="mailto:'+email+'">'+email+'</a></td><td>'+num+'</td><td>'+add+'</td><td>'+msg+'</td><td>'+status+'</td><td><button type="submit" onclick=updateEnquiry("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td></tr>'
+        
+          }
+        }else{
+          
+          document.getElementById("sliderdata").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
+        }
+      }
+      function Recruiters(data){
+        var btnstatus;
+      
+        sc=data.val();
+        if(sc!=null){
+          keys=Object.keys(sc);
+          $('#recruiters').empty();
+          for(var i=0;i<keys.length;i++){          
+            k=keys[i];
+            urls =sc[k].Image;
+            status =sc[k].Status;
+            if(status == "Active"){
+              btnstatus="Hide"
+            }
+            else{
+              btnstatus="Activate"
+            }
+            document.getElementById("recruiters").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td>'+status+'</td><td><button type="submit" onclick=updateRecruiter("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick=removeRecruiter("'+k+'")>delete</i></button></td></tr>'
+        
+          }
+        }else{
+          
+          document.getElementById("recruiters").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
+        }
+      }
+      function marquee(data){
+        
+        var btnstatus2;
+        sc2=data.val();
+        if(sc2!=null){
+        
+          key=Object.keys(sc2);
+          $('#runningdata').empty();
+          for(var i=0;i<key.length;i++){ 
+                 
+            k=key[i];
+            data =sc2[k].Data;
+            priority =sc2[k].Priority;
+            status =sc2[k].Status;
+
+            if(status == "Active"){
+              btnstatus2="Hide"
+            }
+            else{
+              btnstatus2="Activate"
+            }
+            document.getElementById("runningdata").innerHTML+='<tr><td>'+data+'</td><td>'+status+'</td><td><input type="text" id="num'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateRunningTxt("'+i+'","num'+i+'")></i></td><td><button type="submit" onclick=updateStatus("'+i+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus2+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="remove('+i+')">delete</i></button></td></tr>'
+        
+          }
+        }else{
+          
+          document.getElementById("runningdata").innerHTML+='<h4>No texts found!! To add a new running text ,click here <a href="running.html">Add a Marquee</a></h4> '
+        }
+      }
+      function updateSlider(index){
+        var Status=""
+        var popuptxt;
+        var k=keys[index];
+        origstatus =sc[k].Status;
+        if(origstatus=="Active"){
+          Status="Hidden"
+          popuptxt="Hide"
+        }else{
+          Status="Active"
+          popuptxt="Activate"
+        }
+        data={Status}
+        var answer=window.confirm("Are you sure, you want to "+popuptxt+" the slider?")
+        if(answer)
+        {
+          firebase.database().ref("SliderImages").child(k).update(data);
+
+        }
+      }
+      function updateProgramme(key){
+        var Status=""
+        var popuptxt;
+        
+        origstatus =sc[key].Status;
+        if(origstatus=="Active"){
+          Status="Hidden"
+          popuptxt="Hide"
+        }else{
+          Status="Active"
+          popuptxt="Activate"
+        }
+        data={Status}
+        var answer=window.confirm("Are you sure, you want to "+popuptxt+" the Programme?")
+        if(answer)
+        {
+          firebase.database().ref("Programme").child(key).update(data);
+
+        }
+      }
+      function updateRecruiter(key){
+        var Status=""
+        var popuptxt;
+        
+        origstatus =sc[key].Status;
+        if(origstatus=="Active"){
+          Status="Hidden"
+          popuptxt="Hide"
+        }else{
+          Status="Active"
+          popuptxt="Activate"
+        }
+        data={Status}
+        var answer=window.confirm("Are you sure, you want to "+popuptxt+" the Recruiter?")
+        if(answer)
+        {
+          firebase.database().ref("Recruiters").child(key).update(data);
+
+        }
+      }
+
+      function updateStatus(index){
+        var Status=""
+        var popuptxt;
+        var k=key[index];
+        origstatus =sc2[k].Status;
+        if(origstatus=="Active"){
+          Status="Hidden"
+          popuptxt="Hide"
+        }else{
+          Status="Active"
+          popuptxt="Activate"
+        }
+        data={Status}
+        var answer=window.confirm("Are you sure, you want to "+popuptxt+" the Text?")
+        if(answer)
+        {
+          firebase.database().ref("RunningText").child(k).update(data);
+
+        }
+      }
+      function updateRunningTxt(index,value){
+        k=key[index];
+        var answer=window.confirm("Are you sure, you want to change the text?")
+        p=value
+        Data=document.querySelector('#'+p).value;
+        if(answer && Data.trim()!="")
+        {
+          firebase.database().ref("RunningText").child(k).update({Data});
+
+        }
+      }
+      function updateEnquiry(key){
+
+        var answer=window.confirm("Are you sure, you want to mark the enquiry complete( This will delete the enquiry)?")
+        if(answer)
+        {
+          firebase.database().ref("Enquiry").child(key).remove();
+
+        }
+      }
+      function updatetext(key,value){
+       
+
+        var answer=window.confirm("Are you sure, you want to change the text?")
+        p=value
+
+        SliderData=document.querySelector('#'+p).value;
+
+        if(answer && SliderData.trim()!="")
+        {
+          firebase.database().ref("SliderImages").child(key).update({SliderData});
+
+        }
+      }
+      function removeslider(index){
+
+        var k=keys[index];
+        var urls=sc[k].Image;
+        var desertRef = firebase.storage().refFromURL(urls);
+
+        var answer=window.confirm("Are you sure, you want to Delete ?")
+        if(answer){
+          desertRef.delete().then(function() {
+            firebase.database().ref("SliderImages").child(k).remove();
+            alert("Slider Deleted")// File deleted successfully
+          }).catch(function(error) {
+            alert("Uh-oh, an error occurred! Please Try Again")
+            // Uh-oh, an error occurred!
+          });
+
+        }
+      }
+      function removeProgramme(key){
+
+        // var k=keys[index];
+        var urls=sc[key].Image;
+        var desertRef = firebase.storage().refFromURL(urls);
+
+        var answer=window.confirm("Are you sure, you want to Delete ?")
+        if(answer){
+          desertRef.delete().then(function() {
+            firebase.database().ref("SliderImages").child(key).remove();
+            alert("Slider Deleted")// File deleted successfully
+          }).catch(function(error) {
+            alert("Uh-oh, an error occurred! Please Try Again")
+            // Uh-oh, an error occurred!
+          });
+
+        }
+      }
+      function removeRecruiter(key){
+
+        // var k=keys[index];
+        var urls=sc[key].Image;
+        var desertRef = firebase.storage().refFromURL(urls);
+
+        var answer=window.confirm("Are you sure, you want to Delete ?")
+        if(answer){
+          desertRef.delete().then(function() {
+            firebase.database().ref("Recruiters").child(key).remove();
+            alert("Slider Deleted")// File deleted successfully
+          }).catch(function(error) {
+            alert("Uh-oh, an error occurred! Please Try Again")
+            // Uh-oh, an error occurred!
+          });
+
+        }
+      }
+        function remove(index){
+
+          var k=key[index];
+          var answer=window.confirm("Are you sure, you want to Delete ?")
+          if(answer){
+              firebase.database().ref("RunningText").child(k).remove();
+              alert("Running Text Deleted Successfully")// File deleted successfully
+          }
+          // Delete the file
+
+
+
+      }
+      function errData(err) {
+        console.log('error');
+        console.log(err);
+      }
+
+</script>
 </body>
+
 </html>
