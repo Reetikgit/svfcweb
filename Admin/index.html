@@ -43,7 +43,7 @@
           <li class="nav-item active  ">
             <a class="nav-link" href="./index.html">
               <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+              <p>ADMIN | Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
@@ -91,7 +91,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Dashboard</a>
+            <a class="navbar-brand" href="javascript:;">ADMIN-Dashboard</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
@@ -137,15 +137,15 @@
                   <div class="card-icon">
                     <i class="material-icons">content_copy</i>
                   </div>
-                  <p class="card-category">Used Space</p>
-                  <h3 class="card-title">49/50
-                    <small>GB</small>
+                  <p class="card-category">Sldiers Active</p>
+                  <h3 class="card-title" id="sliderboard">Loading..
                   </h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons text-danger">warning</i>
-                    <a href="javascript:;">Get More Space...</a>
+                  <!--   <i class="material-icons text-danger">warning</i> -->
+                    <a href="
+                    sliderDynamic.html">Add a Slider</a>
                   </div>
                 </div>
               </div>
@@ -154,15 +154,15 @@
               <div class="card card-stats">
                 <div class="card-header card-header-success card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">store</i>
+                 
+                      <i class="fa fa-question-circle"></i>
+                    
                   </div>
-                  <p class="card-category">Revenue</p>
-                  <h3 class="card-title">$34,245</h3>
+                  <p class="card-category">Active Enquiries</p>
+                  <h3 class="card-title"id="enquiryboard">Loding..</h3>
                 </div>
                 <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">date_range</i> Last 24 Hours
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -170,14 +170,14 @@
               <div class="card card-stats">
                 <div class="card-header card-header-danger card-header-icon">
                   <div class="card-icon">
-                    <i class="material-icons">info_outline</i>
+                    <i class="material-icons">bubble_chart</i>
                   </div>
-                  <p class="card-category">Fixed Issues</p>
-                  <h3 class="card-title">75</h3>
+                  <p class="card-category">Active Recruiters</p>
+                  <h3 class="card-title" id="recruitersboard">Loading..</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
-                    <i class="material-icons">local_offer</i> Tracked from Github
+                    <a href="recruiters.html">Add A Recruiter</a>
                   </div>
                 </div>
               </div>
@@ -186,10 +186,11 @@
               <div class="card card-stats">
                 <div class="card-header card-header-info card-header-icon">
                   <div class="card-icon">
-                    <i class="fa fa-twitter"></i>
+                    <i class="material-icons">library_books</i>
+                   
                   </div>
-                  <p class="card-category">Followers</p>
-                  <h3 class="card-title">+245</h3>
+                  <p class="card-category">Active Programmes</p>
+                  <h3 class="card-title" id="prgmboard">Loading..</h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
@@ -590,7 +591,7 @@
       let ref5= firebase.database().ref('Enquiry');
       var storageService = firebase.storage();
       var key,keys=null;
-      var sc,sc2=null,sc3,sc4;
+      var sc,sc2=null,sc3,sc4,sc1;
       ref.on('value',gotData,errData);
       ref2.on('value',marquee,errData);
       ref3.on('value',Programme,errData);
@@ -598,7 +599,7 @@
       ref5.on('value',showEnquiry,errData);
       function Programme(data){
           var btnstatus;
-        
+          var c=0;
           sc3=data.val();
           if(sc3!=null){
             keys=Object.keys(sc3);
@@ -611,6 +612,8 @@
               name=sc3[k].Name
               if(status == "Active"){
                 btnstatus="Hide"
+                c++;
+                document.getElementById("prgmboard").innerHTML=c;
               }
               else{
                 btnstatus="Activate"
@@ -626,25 +629,27 @@
       
       function gotData(data){
         var btnstatus;
-      
-        sc=data.val();
-        if(sc!=null){
-          keys=Object.keys(sc);
+        var slider=0;
+        sc1=data.val();
+        if(sc1!=null){
+          keys=Object.keys(sc1);
           $('#sliderdata').empty();
           for(var i=0;i<keys.length;i++){          
             k=keys[i];
-            urls =sc[k].Image;
-            status =sc[k].Status;
-            var data=sc[k].SliderData
+            urls =sc1[k].Image;
+            status =sc1[k].Status;
+            var data=sc1[k].SliderData
             if(status == "Active"){
+              slider++;
               btnstatus="Hide"
             }
             else{
               btnstatus="Activate"
             }
-            document.getElementById("sliderdata").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td>'+data+'</td><td><input type="text" id="txtd'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updatetext("'+k+'","txtd'+i+'")></i></td><td>'+status+'</td><td><button type="submit" onclick="updateSlider('+i+')" style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick="removeslider('+i+')">delete</i></button></td></tr>'
+            document.getElementById("sliderdata").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td>'+data+'</td><td><input type="text" id="txtd'+i+'">&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updatetext("'+k+'","txtd'+i+'")></i></td><td>'+status+'</td><td><button type="submit" onclick=updateSlider("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick=removeslider("'+k+'")>delete</i></button></td></tr>'
         
           }
+          document.getElementById("sliderboard").innerHTML=slider+"/10"
         }else{
           
           document.getElementById("sliderdata").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
@@ -674,6 +679,7 @@
             document.getElementById("enquirytbl").innerHTML+='<tr><td>'+Name+'</td><td><a href="mailto:'+email+'">'+email+'</a></td><td>'+num+'</td><td>'+add+'</td><td>'+msg+'</td><td>'+status+'</td><td><button type="submit" onclick=updateEnquiry("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td></tr>'
         
           }
+          document.getElementById("enquiryboard").innerHTML=keys.length
         }else{
           
           document.getElementById("sliderdata").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
@@ -681,7 +687,7 @@
       }
       function Recruiters(data){
         var btnstatus;
-      
+        var count=0;
         sc4=data.val();
         if(sc4!=null){
           keys=Object.keys(sc4);
@@ -692,6 +698,8 @@
             status =sc4[k].Status;
             if(status == "Active"){
               btnstatus="Hide"
+              count++;
+              document.getElementById("recruitersboard").innerHTML=count
             }
             else{
               btnstatus="Activate"
@@ -733,11 +741,10 @@
           document.getElementById("runningdata").innerHTML+='<h4>No texts found!! To add a new running text ,click here <a href="running.html">Add a Marquee</a></h4> '
         }
       }
-      function updateSlider(index){
+      function updateSlider(key){
         var Status=""
         var popuptxt;
-        var k=keys[index];
-        origstatus =sc[k].Status;
+        origstatus =sc1[key].Status;
         if(origstatus=="Active"){
           Status="Hidden"
           popuptxt="Hide"
@@ -749,7 +756,7 @@
         var answer=window.confirm("Are you sure, you want to "+popuptxt+" the slider?")
         if(answer)
         {
-          firebase.database().ref("SliderImages").child(k).update(data);
+          firebase.database().ref("SliderImages").child(key).update(data);
 
         }
       }
@@ -847,16 +854,14 @@
 
         }
       }
-      function removeslider(index){
-
-        var k=keys[index];
-        var urls=sc[k].Image;
+      function removeslider(key){
+        var urls=sc1[key].Image;
         var desertRef = firebase.storage().refFromURL(urls);
 
         var answer=window.confirm("Are you sure, you want to Delete ?")
         if(answer){
           desertRef.delete().then(function() {
-            firebase.database().ref("SliderImages").child(k).remove();
+            firebase.database().ref("SliderImages").child(key).remove();
             alert("Slider Deleted")// File deleted successfully
           }).catch(function(error) {
             alert("Uh-oh, an error occurred! Please Try Again")
@@ -868,7 +873,7 @@
       function removeProgramme(key){
 
         // var k=keys[index];
-        var urls=sc[key].Image;
+        var urls=sc3[key].Image;
         var desertRef = firebase.storage().refFromURL(urls);
 
         var answer=window.confirm("Are you sure, you want to Delete ?")
@@ -886,7 +891,7 @@
       function removeRecruiter(key){
 
         // var k=keys[index];
-        var urls=sc[key].Image;
+        var urls=sc4[key].Image;
         var desertRef = firebase.storage().refFromURL(urls);
 
         var answer=window.confirm("Are you sure, you want to Delete ?")
