@@ -34,7 +34,7 @@
     <header>
         <!-- Navigation Menu start-->
 <!--    <marquee><h4 style="margin-top: 0%;color: red;padding: 0px;" >sdfdsugsgvshgv</h4></marquee> -->
-    <marquee  scrollamount="12" class="webquote" style=""> <h5 class="runningquotes" id="runningquote" style="letter-spacing: 2px;margin-right:0%;">Please Wait..</h5>
+    <marquee  scrollamount=11 class="webquote" style=""> <h5 class="runningquotes" id="runningquote" style="letter-spacing: 2px;margin-right:0%;color:black;font-family: ;font-style:inherit;">Please Wait..</h5>
     </marquee>
     <nav id="topNav" class="navbar navbar-default main-menu">
 
@@ -1065,8 +1065,11 @@
                 
                 // alert("img"+i+"")
             }
+            if(i==keys.length){
+               document.getElementById("runningquote").innerHTML=txt; 
+            }
             
-               document.getElementById("runningquote").innerHTML=txt;
+             
             
         }
           

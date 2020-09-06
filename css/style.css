@@ -1695,7 +1695,7 @@ footer ul li a i{
 	.webquote{
 		position: fixed;
 		z-index: 1099;
-		background-color: rgb(194, 123, 23,1);
+		background-color:white;
 		border-bottom:2px solid darkgreen;
 		top:0;
 		border-radius: 5px 0 5px 0px;
@@ -1797,7 +1797,7 @@ footer ul li a i{
   .webquote{
   	position: fixed;
   	z-index: 1099;
-  	background-color: rgb(194, 123, 23,1);
+  	background-color:white;
   	border-bottom:2px solid brown;
   	top:0;
   	border-radius: 15px 0 15px 0px;
@@ -1900,8 +1900,8 @@ footer ul li a i{
 		bottom: 0;
 		position: fixed;
 		z-index: 999;
-		background-color: rgb(194, 123, 23,1);
-		border-bottom:1px solid brown;
+		background-color:white;
+		border-bottom:2px solid green;
 		height: 4%;
 		border-radius: 0px 0 0px 0px;
 	}
