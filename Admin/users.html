@@ -1,14 +1,3 @@
-<!--
-=========================================================
-Material Dashboard - v2.1.2
-=========================================================
-
-Product Page: https://www.creative-tim.com/product/material-dashboard
-Copyright 2020 Creative Tim (https://www.creative-tim.com)
-Coded by Creative Tim
-
-=========================================================
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,9 +7,8 @@ The above copyright notice and this permission notice shall be included in all c
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    ADMIN | Running Text
+    ADMIN | USER
   </title>
-
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -31,7 +19,6 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="../assets/demo/demo.css" rel="stylesheet" />
   <link rel="icon" href="../images/logo.png" type="image/icon type">
 </head>
-
 <style type="text/css">
   .wrapper2  {
     background-color: #fff;
@@ -286,13 +273,13 @@ The above copyright notice and this permission notice shall be included in all c
 
 <body class="">
   <div class="wrapper " >
-   <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+   <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg" >
 
      <div class="logo"><a class="simple-text logo-normal">
          <img src="../images/logo.png">
          <h5 style="font-family: futu;font-size: 0.8em">Sai Vidya First Grade College</h5>
        </a></div>
-     <div class="sidebar-wrapper">
+     <div class="sidebar-wrapper" >
        <ul class="nav">
          
          <li class="nav-item active  ">
@@ -337,7 +324,7 @@ The above copyright notice and this permission notice shall be included in all c
              <p>Facility</p>
            </a>
          </li>
-       
+     
        </ul>
      </div>
    </div>
@@ -388,25 +375,54 @@ The above copyright notice and this permission notice shall be included in all c
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Add Running Text</h4>
+                  <h4 class="card-title">Add New User</h4>
                   
                 </div>
                 <div class="wrapper2">
-                  <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6">
                     <div class="form-group">
+                      <label style="color: black;font-weight: bolder;font-size: 1em">User Name</label>
                       <div class="form-group">
-                        <label class="bmd-label-floating">Add Running Text Here</label>
-                        <textarea class="form-control" rows="3" id="runningdata"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label class="bmd-label-floating">Add Priority</label>
-                        <input type="number" class="form-control"  id="priority">
+                        <label class="bmd-label-floating"></label>
+                        <input class="form-control"  id="name">
                       </div>
                     </div>
                   </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label style="color: black;font-weight: bolder;font-size: 1em">User Email</label>
+                      <div class="form-group">
+                        <label class="bmd-label-floating"></label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <div class="row">
+                   <div class="col-md-6">
+                     <div class="form-group">
+                       <label style="color: black;font-weight: bolder;font-size: 1em">Create Pawword</label>
+                       <div class="form-group">
+                         <label class="bmd-label-floating"></label>
+                         <input type="password" class="form-control"  id="password">
+                       </div>
+                     </div>
+                   </div>
+                   <div class="col-md-6">
+                     <div class="form-group">
+                       <label style="color: black;font-weight: bolder;font-size: 1em">Confirm Password</label>
+                       <div class="form-group">
+                         <label class="bmd-label-floating"></label>
+                         <input type="password" class="form-control" id="cpass">
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 
                   <footer>
                     <ul>
-                      <li><span id="send">Push</span></li>
+                      <li><span id="send">Add User</span></li>
                     </ul>
                   </footer> 
                  
@@ -424,7 +440,7 @@ The above copyright notice and this permission notice shall be included in all c
 
     </div>
   </div>
-
+  
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -486,176 +502,62 @@ The above copyright notice and this permission notice shall be included in all c
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        function logmeout(){
-          ans=confirm("Are You Sure Log Out?")
-          if(ans){
-            window.localStorage.removeItem('user');
-            window.location="login.html"
-          }
-        
-        }
-        var key=window.localStorage.getItem('user');
-        var username=window.localStorage.getItem('username')
-        document.getElementById("usr").innerHTML=username
-        setInterval(function(){
-         
-          if(key==undefined||key==null){
-            
-            window.location="login.html"
-          }else{
-            document.getElementById("bdy").style.display="block"
-          }
-        },100)
-
       // Initialize Firebase
-      let ref= firebase.database().ref('RunningText');
-
-      
-      send.addEventListener('click',pushData)
-      function pushData(){
-        var runningdata=document.querySelector('#runningdata').value;
-        var priority=document.querySelector('#priority').value;
-          let newFormMessage = ref.push();
-
-            newFormMessage.set({
-            Data:runningdata ,
-            Status:"Active",
-            Priority:priority
-          
-          });
-
-          alert("Running Texts is Live Now")
-          window.location="running.html"
+      function logmeout(){
+        ans=confirm("Are You Sure Log Out?")
+        if(ans){
+          window.localStorage.removeItem('user');
+          window.location="login.html"
         }
-
-
       
-
-      var janelaPopUp = new Object();
-      janelaPopUp.abre = function(id, classes, titulo, corpo, functionCancelar, functionEnviar, textoCancelar, textoEnviar){
-          var cancelar = (textoCancelar !== undefined)? textoCancelar: 'Cancel';
-          var enviar = (textoEnviar !== undefined)? textoEnviar: 'Ok';
-          classes += ' ';
-          var classArray = classes.split(' ');
-          classes = '';
-          classesFundo = '';
-          var classBot = '';
-          $.each(classArray, function(index, value){
-              switch(value){
-                  case 'alert' : classBot += ' alert '; break;
-                  case 'blue' : classesFundo += this + ' ';
-                  case 'green' : classesFundo += this + ' ';
-                  case 'red' : classesFundo += this + ' ';
-                  case 'white': classesFundo += this + ' ';
-                  case 'orange': classesFundo += this + ' ';
-                  case 'purple': classesFundo += this + ' ';
-                  default : classes += this + ' '; break;
-              }
-          });
-          var popFundo = '<div id="popFundo_' + id + '" class="popUpFundo ' + classesFundo + '"></div>'
-          var janela = '<div id="' + id + '" class="popUp ' + classes + '"><h1>' + titulo + "</h1><div><span>" + corpo + "</span></div><button class='puEnviar " + classBot + "' data-parent=" + id + " id='popupclick'>" + enviar + "</button></div>";
-          $("window, body").css('overflow', 'hidden');
-
-          $("body").append(popFundo);
-          $("body").append(janela);
-          $("body").append(popFundo);
-           //alert(janela);
-          $("#popFundo_" + id).fadeIn("fast");
-          $("#" + id).addClass("popUpEntrada");
-
-          $("#" + id + '_cancelar').on("click", function(){
-              if((functionCancelar !== undefined) && (functionCancelar !== '')){
-                  functionCancelar();
-
-              }else{
-                  janelaPopUp.fecha(id);
-              }
-          });
-          $("#" + id + '_enviar').on("click", function(){
-              if((functionEnviar !== undefined) && (functionEnviar !== '')){
-                  functionEnviar();
-              }else{
-                  janelaPopUp.fecha(id);
-              }
-          });
-
-      };
-      janelaPopUp.abre2 = function(id, classes, titulo, corpo, functionCancelar, functionEnviar, textoCancelar, textoEnviar){
-
-
-          var cancelar = (textoCancelar !== undefined)? textoCancelar: 'Cancel';
-          var enviar = (textoEnviar !== undefined)? textoEnviar: 'Ok';
-          classes += ' ';
-          var classArray = classes.split(' ');
-          classes = '';
-          classesFundo = '';
-          var classBot = '';
-          $.each(classArray, function(index, value){
-              switch(value){
-                  case 'alert' : classBot += ' alert '; break;
-                  case 'blue' : classesFundo += this + ' ';
-                  case 'green' : classesFundo += this + ' ';
-                  case 'red' : classesFundo += this + ' ';
-                  case 'white': classesFundo += this + ' ';
-                  case 'orange': classesFundo += this + ' ';
-                  case 'purple': classesFundo += this + ' ';
-                  default : classes += this + ' '; break;
-              }
-          });
-          var popFundo = '<div id="popFundo_' + id + '" class="popUpFundo ' + classesFundo + '"></div>'
-          var janela = '<div id="' + id + '" class="popUp ' + classes + '"><h1>' + titulo + "</h1><div><span>" + corpo + "</span></div></div>";
-          $("window, body").css('overflow', 'hidden');
-
-          $("body").append(popFundo);
-          $("body").append(janela);
-          $("body").append(popFundo);
-           //alert(janela);
-          $("#popFundo_" + id).fadeIn("fast");
-          $("#" + id).addClass("popUpEntrada");
-
-          $("#" + id + '_cancelar').on("click", function(){
-              if((functionCancelar !== undefined) && (functionCancelar !== '')){
-                  functionCancelar();
-
-              }else{
-                  janelaPopUp.fecha(id);
-              }
-          });
-          $("#" + id + '_enviar').on("click", function(){
-              if((functionEnviar !== undefined) && (functionEnviar !== '')){
-                  functionEnviar();
-              }else{
-                  janelaPopUp.fecha(id);
-              }
-          });
-
-      };
-      janelaPopUp.fecha = function(id){
-          if(id !== undefined){
-              $("#" + id).removeClass("popUpEntrada").addClass("popUpSaida");
-
-                  $("#popFundo_" + id).fadeOut(1000, function(){
-                      $("#popFundo_" + id).remove();
-                      $("#" + $(this).attr("id") + ", #" + id).remove();
-                      if (!($(".popUp")[0])){
-                          $("window, body").css('overflow', 'auto');
-                      }
-                  });
-
-
-          }
-          else{
-              $(".popUp").removeClass("popUpEntrada").addClass("popUpSaida");
-
-                  $(".popUpFundo").fadeOut(1000, function(){
-                      $(".popUpFundo").remove();
-                      $(".popUp").remove();''
-                      $("window, body").css('overflow', 'auto');
-                  });
-
-
-          }
       }
+      var key=window.localStorage.getItem('user');
+      setInterval(function(){
+       
+        if(key==undefined||key==null){
+          
+          window.location="login.html"
+        }else{
+          document.getElementById("bdy").style.display="block"
+        }
+      },100)
+      let formMessage = firebase.database().ref('User');
+      let ref= firebase.database().ref('User');
+
+      send.addEventListener('click',pushdata)
+
+    function pushdata(){
+
+
+    var name=document.querySelector('#name').value;
+    var email=document.querySelector('#email').value;
+    var pass=document.querySelector('#password').value;
+    epass=btoa(pass)
+    var cpass=document.querySelector('#cpass').value;
+    if((name!=""||email!="")){
+      if(email.includes("@")){
+          if(pass==cpass){
+             let newFormMessage = formMessage.push();
+               newFormMessage.set({
+               Name: name,
+               Status:"Active",
+               Password:epass,
+               Email:email,
+               token:0                  
+             });
+            alert("User Added successfully")
+            window.location="users.html"
+           }else{
+            alert("Password missed match")
+           }
+        }else{
+          alert("Please enter a valid email address")
+        }
+      }else{
+      alert("Please enter valid data in all the fields")
+    }
+  }
+
   </script>
 </body>
 

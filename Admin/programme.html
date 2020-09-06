@@ -17,6 +17,7 @@
   <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link rel="icon" href="../images/logo.png" type="image/icon type">
 </head>
 <style type="text/css">
   .wrapper2  {
@@ -359,9 +360,7 @@
                </a>
                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                  <a class="dropdown-item" href="#">Profile</a>
-                 <a class="dropdown-item" href="#">Settings</a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="#">Log out</a>
+                 <a class="dropdown-item" onclick="logmeout()">Log out</a>
                </div>
              </li>
            </ul>
@@ -528,7 +527,24 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
       // Initialize Firebase
-
+      function logmeout(){
+        ans=confirm("Are You Sure Log Out?")
+        if(ans){
+          window.localStorage.removeItem('user');
+          window.location="login.html"
+        }
+      
+      }
+      var key=window.localStorage.getItem('user');
+      setInterval(function(){
+       
+        if(key==undefined||key==null){
+          
+          window.location="login.html"
+        }else{
+          document.getElementById("bdy").style.display="block"
+        }
+      },100)
       let formMessage = firebase.database().ref('Programme');
       let ref= firebase.database().ref('Programme');
 
