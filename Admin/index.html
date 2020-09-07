@@ -233,6 +233,12 @@
                             <div class="ripple-container"></div>
                           </a>
                         </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#facilityh" data-toggle="tab">
+                            <i class="material-icons"></i>Active Facilities
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -254,6 +260,7 @@
                         </tbody>
                       </table>
                     </div>
+
                     <div class="tab-pane" id="messages">
                       <table class="table">
                         <thead class="text-warning" >
@@ -291,6 +298,22 @@
                           <th>Delete</th>
                         </thead>
                         <tbody id="programme">
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="tab-pane " id="facilityh">
+                      <table class="table">
+                        <thead class="text-warning" >
+                          <th>Image</th>
+                          <th>Name</th>
+                          <th>Edit Image</th>
+                          <th>Edit Text</th>
+                          <th>Status</th>
+                          <th>Edit Status</th>
+                          <th>Delete</th>
+                        </thead>
+                        <tbody id="facility">
                           
                         </tbody>
                       </table>
@@ -612,14 +635,16 @@
       let ref3= firebase.database().ref('Programme');
       let ref4= firebase.database().ref('Recruiters');
       let ref5= firebase.database().ref('Enquiry');
+      let ref6= firebase.database().ref('Facility');
       var storageService = firebase.storage();
       var key,keys=null;
-      var sc,sc2=null,sc3,sc4,sc1;
+      var sc,sc2=null,sc3,sc4,sc1,sc5;
       ref.on('value',gotData,errData);
       ref2.on('value',marquee,errData);
       ref3.on('value',Programme,errData);
       ref4.on('value',Recruiters,errData);
       ref5.on('value',showEnquiry,errData);
+      ref6.on('value',showFacility,errData);
       function Programme(data){
           var btnstatus;
           var c=0;
@@ -651,6 +676,7 @@
         }
       
       function gotData(data){
+
         var btnstatus;
         var slider=0;
         sc1=data.val();
@@ -673,6 +699,36 @@
         
           }
           document.getElementById("sliderboard").innerHTML=slider+"/10"
+        }else{
+          
+          document.getElementById("sliderdata").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
+        }
+      }
+      function showFacility(data){
+        var btnstatus;
+        var slider=0;
+        sc5=data.val();
+        if(sc5!=null){
+          keys=Object.keys(sc5);
+          $('#facility').empty();
+          for(var i=0;i<keys.length;i++){          
+            k=keys[i];
+            urls =sc5[k].Image;
+            status =sc5[k].Status;
+            var data=sc5[k].SubDesc
+            name=sc5[k].Name
+            if(status == "Active"){
+              
+              btnstatus="Hide"
+            }
+            else{
+              btnstatus="Activate"
+            }
+            document.getElementById("facility").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td><textarea id="facname'+i+'"></textarea>&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateFacilityName("'+k+'","facname'+i+'")></i></td><td><input type="file" id="changeimg'+i+'" accept="image/*"><progress value="0" max = "100" id="uploader'+i+'" > 0%</progress></td><td><textarea row="14" style="height:9em" id="fac'+i+'"></textarea>&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateFacilitytext("'+k+'","fac'+i+'")></i></td><td>'+status+'</td><td><button type="submit" onclick=updateFacility("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick=removeFacility("'+k+'")>delete</i></button></td></tr>'
+              document.getElementById("fac"+i).innerHTML=data;
+              document.getElementById("facname"+i).innerHTML=name;
+          }
+
         }else{
           
           document.getElementById("sliderdata").innerHTML+='<h4>No sliders found!! To Upload a new slider click here <a href="sliderDynamic.html">UPLOAD</a></h4> '
@@ -783,6 +839,25 @@
 
         }
       }
+      function updateFacility(key){
+        var Status=""
+        var popuptxt;
+        origstatus =sc5[key].Status;
+        if(origstatus=="Active"){
+          Status="Hidden"
+          popuptxt="Hide"
+        }else{
+          Status="Active"
+          popuptxt="Activate"
+        }
+        data={Status}
+        var answer=window.confirm("Are you sure, you want to "+popuptxt+" the Facility?")
+        if(answer)
+        {
+          firebase.database().ref("Facility").child(key).update(data);
+
+        }
+      }
       function updateProgramme(key){
         var Status=""
         var popuptxt;
@@ -877,6 +952,36 @@
 
         }
       }
+      function updateFacilitytext(key,value){
+       
+
+        var answer=window.confirm("Are you sure, you want to change the text?")
+        p=value
+
+        SubDesc=document.querySelector('#'+p).value;
+
+        if(answer && SubDesc.trim()!="")
+        {
+          firebase.database().ref("Facility").child(key).update({SubDesc});
+          alert("Description has been successully updated")
+
+        }
+      }
+      function updateFacilityName(key,value){
+       
+
+        var answer=window.confirm("Are you sure, you want to change the Name?")
+        p=value
+
+        Name=document.querySelector('#'+p).value;
+
+        if(answer && Name.trim()!="")
+        {
+          firebase.database().ref("Facility").child(key).update({Name});
+          alert("Name has been successully updated")
+
+        }
+      }
       function removeslider(key){
         var urls=sc1[key].Image;
         var desertRef = firebase.storage().refFromURL(urls);
@@ -904,6 +1009,24 @@
           desertRef.delete().then(function() {
             firebase.database().ref("SliderImages").child(key).remove();
             alert("Slider Deleted")// File deleted successfully
+          }).catch(function(error) {
+            alert("Uh-oh, an error occurred! Please Try Again")
+            // Uh-oh, an error occurred!
+          });
+
+        }
+      }
+      function removeFacility(key){
+
+        // var k=keys[index];
+        var urls=sc5[key].Image;
+        var desertRef = firebase.storage().refFromURL(urls);
+
+        var answer=window.confirm("Are you sure, you want to Delete ?")
+        if(answer){
+          desertRef.delete().then(function() {
+            firebase.database().ref("Facility").child(key).remove();
+            alert("Facility Deleted")// File deleted successfully
           }).catch(function(error) {
             alert("Uh-oh, an error occurred! Please Try Again")
             // Uh-oh, an error occurred!
