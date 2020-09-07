@@ -179,8 +179,96 @@ footer .glyphicon {
     font-size: 150px;
   }
 }
+
+    .marquee {
+          margin: 0 auto;
+          width: 100%;
+          height: 25px;
+          
+          overflow: hidden;
+          box-sizing: border-box;
+          position: fixed;
+        }
+        .marquee:before,
+        .marquee:after {
+          position: absolute;
+          top: 0;
+          width: 300px;
+          height: 30px;
+          content: "";
+          z-index: 1;
+        }
+        .marquee:before {
+          left: 0;
+          /*background: linear-gradient(to right, #965A6E 40%, transparent 70%);*/
+        }
+        .marquee:after {
+          right: 0;
+          background: linear-gradient(to left, #965A6E 40%, transparent 70%);
+        }
+        .marquee__content {
+          width: 300%;
+          display: flex;
+          line-height: 30px;
+          animation: marquee 25s linear infinite forwards;
+        }
+        .marquee__content:hover {
+          animation-play-state: paused;
+        }
+        .list-inline {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+          margin-right: 50%;
+          /* reset list */
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-96.6%);
+          }
+        }
+        @media only screen and (max-width: 767px) {
+            .marquee:before,
+            .marquee:after {
+         
+              width: 120px;
+             
+            }
+            .marquee{
+                width: 100%;
+            }
+            .marquee__content {
+                width: 500%;
+              animation: marquee 20s linear infinite forwards;
+            }
+           .list-inline {
+             display: flex;
+             justify-content: space-around;
+             width: 100%;
+             margin-right: 50%;
+             /* reset list */
+             list-style: none;
+             padding: 0;
+             margin: 0;
+           }
+        }
 </style>
+
 <body>
+      <div class="webquote marquee">
+          <div class="marquee__content">
+            <ul class="list-inline" id="runningquote">
+              <li></li>
+            </ul>
+      
+          </div>
+        </div>
        <!-- Preloader -->
        <div class="preloader">
            <div class="status" id="loader"></div>
@@ -190,8 +278,7 @@ footer .glyphicon {
        <header>
            <!-- Navigation Menu start-->
    <!--    <marquee><h4 style="margin-top: 0%;color: red;padding: 0px;" >sdfdsugsgvshgv</h4></marquee> -->
-       <marquee  scrollamount="12" class="webquote" style=""> <h5 class="runningquotes" id="runningquote" style="letter-spacing: 2px;margin-right:0%;">Please Wait..</h5>
-       </marquee>
+       
        <nav id="topNav" class="navbar navbar-default main-menu">
 
        <div class="container">
@@ -245,12 +332,12 @@ footer .glyphicon {
       <div class="row ">
         <div class="col-sm-6" style="margin-top: 10%">
           
-          <img src="https://images.shiksha.com/mediadata/images/1490609004phpCh2WHX.jpeg" style="object-fit: cover;margin-left: 0%;border-radius: 0px">
+          <img src="" style="object-fit: cover;margin-left: 0%;border-radius: 0px" id="abtimg">
         </div>
         <div class="col-sm-6" style="margin-top: 10%">
            <h2 class="highlight-text ">BOARD OF TRUSTEES</h2><br>
-           <h4 class="fadeIn"><b>Sai Vidya First Grade college</b>, popularly known as SVFC, Rajanukunte,  Bengaluru, Karnataka, India is affiliated Bangalore central University (BCU), Benagaluru, Karnataka, Recognized by the Government of Karnataka, was established in the year 2020 by SRI SAI VIDYA VIKAS SHIKSHANA SAMITHI which is a trust formed by a group of well known academicians.</h4><br>
-           <p>The team comprises of <b>Prof. M R Holla, Prof. Y Jayasimha, Prof. R C Shanmukha Swamy, Prof. A M Padma Reddy, Sri. R Srinivas Raju, Sri. Manohar M K and Sri. Narayan Raju..</b></p>
+           <h4 class="fadeIn" ><b>Sai Vidya First Grade college</b>,<ad id="d1"> popularly known as SVFC, Rajanukunte,  Bengaluru, Karnataka, India is affiliated Bangalore central University (BCU), Benagaluru, Karnataka, Recognized by the Government of Karnataka, was established in the year 2020 by SRI SAI VIDYA VIKAS SHIKSHANA SAMITHI which is a trust formed by a group of well known academicians.</h4><br></ad>
+           <p >The team comprises of <b id="d2"></b></p>
          <!--  <span class="glyphicon glyphicon-signal logo"></span> -->
         </div>
       </div>
@@ -315,18 +402,18 @@ footer .glyphicon {
     <div class="row ">
     <div class="col-sm-6" style="" >
       <h2 class="highlight-text ">DIRECTOR'S MESSAGE</h2><br>
-      <p style="margin: auto;display:inline-block;">
+      <p style="margin: auto;display:inline-block;" id="d3">
         We are in the midst of a revolution. The nation is basking in the glory of a new proud generation that is taking the world by storm!
         The entire intellectual community of the world has woken up to the reality that India is a treasure-house of talent and intelligence. The youth of today are taking India to unparalleled heights of prosperity.
         The only raw material essential to this great turnaround is EDUCATION because knowledge is power. Keeping in mind, I assure the students joining Sai Vidya First Grade college, that they will be given the best education to enable them to learn and lead the future with confidence as responsible citizens of the country.
       </p>
       <br><br>
       
-      <b><p style="font-weight: 999">PROF. M. R. HOLLA
+      <b><p style="font-weight: 999"><names id="dn">PROF. M. R. HOLLA</names>
       <br>
-      Recipient of the Prestigious Karnataka Rajyothsava Award for  Academic Excellence
+      <abt id="da">Recipient of the Prestigious Karnataka Rajyothsava Award for  Academic Excellence</abt>
       <br>
-      Founder Trustee & President
+      <desig id="dd">Founder Trustee & President</desig>
       </p></b>
     </div>
     <div class="col-sm-6" style="margin-top:">
@@ -341,7 +428,7 @@ footer .glyphicon {
     <div class="row ">
     <div class="col-sm-6" style="" >
       <h2 class="highlight-text ">PRINCIPAL'S MESSAGE</h2><br>
-      <p style="margin: auto;display:inline-block;">
+      <p style="margin: auto;display:inline-block;" id="d4">
         Sai Vidya First Grade college –SVFC was started in the year 2020. Sai Vidya First Grade college is a brain child of academic stalwarts, who are staunch believers in the path trodden by the 'Gurus' of ancient India. 'Team-SVFC' is on its mission of contributing one of the academic gems to the Nation.
         Since its inception the institution has exhibited intellect and openness to adapt to changing needs of our ever evolving education system. This is the genuine feeling my inner self could perceive at the very first moment of association with this Institute.
         The academic ambience, student centric teaching methodologies, dedicated faculty, constant support for co-curricular activities and campus placements should help parents to make an appropriate decision.
@@ -349,11 +436,11 @@ footer .glyphicon {
         I welcome you to the fold of SVFC for a distinctive journey for attaining the knowledge that is very essential for every successful professional that gives daylight to your dreams.
         <br><br>
         <b><p>
-        DR. D.JOGISH
+        <names id="pn">DR. D.JOGISH</names>
         <br>
-        B.com, MBA, Ph.D
+        <abt id="pa">B.com, MBA, Ph.D</abt>
         <br>
-        Principal & Professor
+        <desig id="pd">Principal & Professor</desig>
         </p></b>
       </p>
     </div>
@@ -490,48 +577,65 @@ footer .glyphicon {
           formAbout.on('value',showDataAbout,errData)
           formText.on('value',showText,errData)
 
-          function showText(data) {
-            var txt=""
-            var sc =data.val();
-            var keys=Object.keys(sc)
-            var i=0;
-            var arr=[];
-            for(i=0;i<keys.length;i++){
-               
-                var k=keys[i];
-                var priority=sc[k].Priority;
-                arr[i]=priority;
+            function showText(data) {
+              var txt=""
+              var sc =data.val();
+              var keys=Object.keys(sc)
+              var i=0;
+              var arr=[];
+              var txt=""
+              var newtxt=""
+              for(i=0;i<keys.length;i++){
+                 
+                  var k=keys[i];
+                  var priority=sc[k].Priority;
+                  arr[i]=priority;
 
-                var data=sc[k].Data;
-                var status=sc[k].Status;
-                
-                arr.sort();
-                
-                txt+=data+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-                
-                
-                // alert("img"+i+"")
-            }
-            if(status=="Active"){
-               document.getElementById("runningquote").innerHTML=txt;
-            }
-        }
+                  var data=sc[k].Data;
+                  var status=sc[k].Status;
+                  
+                  arr.sort();
+                  if(status=="Active"){
+                   txt+=data+"/*"
+                  }
+                 
+              }
+              var edit=txt.split("/*");
+              for(var j=0;j<edit.length;j++){ 
+                      
+              document.getElementById("runningquote").innerHTML+=
+              `
+              <b><li style="font-size:1.2em;font-weight:bolder;font-style:italic">`+edit[j]+`</li><br><br></b>
+              `
+          }
+               
+          }
           
           function showDataAbout(data) {
 
-            // var sc =data.val();
-            // d1=sc['-MGDIeg4347oMaD5sizL'].Description;
-            // d2=sc['-MGDIeg4347oMaD5sizL'].MainDescription1;
-            // d3=sc['-MGDIeg4347oMaD5sizL'].MainDescription2;
-            // vision=sc['-MGDIeg4347oMaD5sizL'].Vision;
-            // mission=sc['-MGDIeg4347oMaD5sizL'].Mission;
-            // image=sc['-MGDIeg4347oMaD5sizL'].Image;
-            // document.getElementById("d1").innerHTML=d1;
-            // document.getElementById("d2").innerHTML=d2;
-            // document.getElementById("d3").innerHTML=d3;
-            // document.getElementById("vision").innerHTML=vision;
-            // document.getElementById("mission").innerHTML=mission;
-            // document.getElementById("abtimg").src=image;
+            var sc =data.val();
+            d1=sc['-MGDIeg4347oMaD5sizL'].Board;
+            d2=sc['-MGDIeg4347oMaD5sizL'].Trust;
+            d3=sc['-MGDIeg4347oMaD5sizL'].Principal;
+            d4=sc['-MGDIeg4347oMaD5sizL'].Director;
+            da=sc['-MGDIeg4347oMaD5sizL'].DA;
+            dn=sc['-MGDIeg4347oMaD5sizL'].DN;
+            dd=sc['-MGDIeg4347oMaD5sizL'].DD;
+            pa=sc['-MGDIeg4347oMaD5sizL'].PA;
+            pn=sc['-MGDIeg4347oMaD5sizL'].PN;
+            pd=sc['-MGDIeg4347oMaD5sizL'].PD;
+            image=sc['-MGDIeg4347oMaD5sizL'].ImageMain;
+            document.getElementById("d1").innerHTML=d1;
+            document.getElementById("d2").innerHTML=d2;
+            document.getElementById("d3").innerHTML=d3;
+            document.getElementById("d4").innerHTML=d4;
+            document.getElementById("dn").innerHTML=da;
+            document.getElementById("da").innerHTML=dn;
+            document.getElementById("dd").innerHTML=dd;
+            document.getElementById("pn").innerHTML=pn;
+            document.getElementById("pa").innerHTML=pa;
+            document.getElementById("pd").innerHTML=pd;
+            document.getElementById("abtimg").src=image;
           }
           function errData(){
 

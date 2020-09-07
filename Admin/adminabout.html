@@ -77,8 +77,11 @@ The above copyright notice and this permission notice shall be included in all c
     overflow: scroll;
 
   }
+  textarea{
+    height: 9em;
+  }
 </style>
-<body class="">
+<body class="" id="bdy">
   <div class="wrapper ">
    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
 
@@ -195,7 +198,7 @@ The above copyright notice and this permission notice shall be included in all c
                              
                              <div class="form-group">
                                
-                               <textarea class="form-control" rows="5" id="d1"></textarea>
+                               <textarea class="form-control" rows="5" id="d1" style="height: 10em"></textarea>
                              </div>
                            </div>
                          </div>
@@ -213,7 +216,7 @@ The above copyright notice and this permission notice shall be included in all c
                               
                               <div class="form-group">
                                 
-                                <textarea class="form-control" rows="5" id="d2"></textarea>
+                                <textarea class="form-control" rows="5" id="d2" style="height: 10em"></textarea>
                               </div>
                             </div>
                           </div>
@@ -231,7 +234,7 @@ The above copyright notice and this permission notice shall be included in all c
                                
                                <div class="form-group">
                                  
-                                 <textarea class="form-control" rows="5" id="d3"></textarea>
+                                 <textarea class="form-control" rows="5" id="d3" style="height: 10em"></textarea>
                                </div>
                              </div>
                            </div>
@@ -248,7 +251,7 @@ The above copyright notice and this permission notice shall be included in all c
                                 
                                 <div class="form-group">
                                   
-                                  <textarea class="form-control" rows="5" id="vission"></textarea>
+                                  <textarea class="form-control" rows="5" id="vission" style="height: 10em"></textarea>
                                 </div>
                               </div>
                             </div>
@@ -266,7 +269,7 @@ The above copyright notice and this permission notice shall be included in all c
                                  
                                  <div class="form-group">
                                    
-                                   <textarea class="form-control" rows="5" id="mission"></textarea>
+                                   <textarea class="form-control" rows="5" id="mission" style="height: 10em"></textarea>
                                  </div>
                                </div>
                              </div>
@@ -293,6 +296,114 @@ The above copyright notice and this permission notice shall be included in all c
                   </div>
                   <button type="submit" class="btn btn-primary pull-right" id="btnsubmit">Submit</button> 
               </div>
+              <br>
+              <div class="card" >
+                  <div class="card-header card-header-primary">
+                    <h4 class="card-title" >About (Main Page)</h4>
+                    <!-- <p class="card-category">Se</p> -->
+                  </div>
+                  <div class="card-body">
+                    <button class="collapsible">Board Of Trustees</button>
+                    <div class="content">
+                        <!--  -->
+                         <div class="row">
+                           <div class="col-md-12">
+                             <div class="form-group">
+                               
+                               <div class="form-group">
+                                 <label>Description</label>
+                                 <textarea class="form-control" rows="5" id="board" style="height: 10em"></textarea>
+                               </div>
+                                <div class="form-group">
+                                 <label>Trustees Name</label>
+                                 <textarea class="form-control" rows="5" id="trust" style="height: 10em"></textarea>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                         
+                         <div class="clearfix"></div>
+                       
+                     </div>
+                     <button class="collapsible">Director's Message</button>
+                     <div class="content">
+                         <!--  -->
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="form-group">
+                                
+                                <div class="form-group">
+                                  
+                                  <textarea class="form-control" rows="5" id="director"  style="height: 10em"></textarea>
+                                </div>
+                                <div class="form-group">
+                                 <label>Director Name</label>
+                                  <textarea class="form-control" rows="5" id="Directorname"  style="height: 5em"></textarea>
+                                </div>
+                                <div class="form-group">
+                                 <label>About Director</label>
+                                  <textarea class="form-control" rows="5" id="Directorabt"  style="height: 5em"></textarea>
+                                </div>
+                                <div class="form-group">
+                                 <label>Director Designation</label>
+                                  <textarea class="form-control" rows="5" id="Directordesig"  style="height: 5em"></textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="clearfix"></div>
+                        
+                      </div>
+                      <button class="collapsible">Principal Message</button>
+                      <div class="content">
+                          <!--  -->
+                           <div class="row">
+                             <div class="col-md-12">
+                               <div class="form-group">
+                                 
+                                 <div class="form-group">
+                                   
+                                   <textarea class="form-control" rows="5" id="principal"  style="height: 10em"></textarea>
+                                 </div>
+                                 <div class="form-group">
+                                  <label>Principal Name</label>
+                                   <textarea class="form-control" rows="5" id="Principalname"  style="height: 5em"></textarea>
+                                 </div>
+                                 <div class="form-group">
+                                  <label>About Principal</label>
+                                   <textarea class="form-control" rows="5" id="Principalabt"  style="height: 5em"></textarea>
+                                 </div>
+                                 <div class="form-group">
+                                  <label>Principal Designation</label>
+                                   <textarea class="form-control" rows="5" id="Principaldesig"  style="height: 5em"></textarea>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                      
+                          <div class="clearfix"></div>
+                       </div>
+                       
+                         <button class="collapsible">Image</button>
+                         <div class="content">
+                             <!--  -->
+                                <img src="" id="imgsmain"  width="150" style="object-fit: contain;">
+                                <div class="col-md-4">
+                                    
+                                    <label class="bmd-label-floating">Upload an Image</label>
+                                    <input type="file" id="fileSubmit2" name="img" accept="image/*" required="Please upload your photo" style="color: blue;border:2px solid gray" class="form-control">
+                                  
+                                </div>
+                             
+                              <progress value="0" max = "100" id="uploader2" > 0%</progress><p id="demo"></p>
+                                                          <div class="clearfix"></div>
+                            
+                          </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right" id="btnsubmit2">Submit</button> 
+                </div>
+              
             </div>
 
           </div>
@@ -403,8 +514,10 @@ The above copyright notice and this permission notice shall be included in all c
       ref.on('value',gotData,errData);
 
       var  uploader = document.getElementById('uploader');
+      var  uploader2 = document.getElementById('uploader2');
       var selectedFile;
       fileSubmit.addEventListener('change', uploadFile);
+      fileSubmit2.addEventListener('change', uploadFile2);
       var progress;
       var selectedFile;
 
@@ -534,12 +647,19 @@ The above copyright notice and this permission notice shall be included in all c
           }
       }
       btnsubmit.addEventListener('click', aftersubmit);
+      btnsubmit2.addEventListener('click', aftersubmit2);
       function uploadFile(e){
         selectedFile=e.target.files[0];
         sendimage();
       }
+      function uploadFile2(e){
+        selectedFile=e.target.files[0];
+        sendimage2();
+      }
       var icount=0;
       var ncount=0;
+      var ncount2=0;
+      var icount2=0;
       function aftersubmit(){
           ncount++;
           if(icount==0)
@@ -564,7 +684,7 @@ The above copyright notice and this permission notice shall be included in all c
             }
           }
         }
-          function sendimage(){
+        function sendimage(){
             icount++;
             if(ncount==0){
                 let d1 =document.querySelector('#d1').value;
@@ -619,6 +739,97 @@ The above copyright notice and this permission notice shall be included in all c
             }
             
         }
+        function aftersubmit2(){
+            ncount2++;
+            if(icount2==0)
+            {
+              let d1 =document.querySelector('#board').value;
+              let d2 =document.querySelector('#trust').value;
+              let d4 =document.querySelector('#principal').value;
+              let d3 =document.querySelector('#director').value;
+              let pa =document.querySelector('#Principalabt').value;
+              let pn =document.querySelector('#Principalname').value;
+              let pd =document.querySelector('#Principaldesig').value;
+              let da =document.querySelector('#Directorabt').value;
+              let dn =document.querySelector('#Directorname').value;
+              let dd =document.querySelector('#Directordesig').value;
+       
+
+              if(d1 == "" || d2 == "" || d3 == ""||d4=="" ){
+                alert(" Please enter details in all the feilds ")
+              }
+              else{
+                // urls="https://images.shiksha.com/mediadata/images/1490609004phpCh2WHX.jpeg"
+                var answer=window.confirm("Are you sure, you want to Update the data ?")
+                if(answer){
+                  sendMessageMain2(d1, d2 , d3 , d4,pn,pa,pd,dn,da,dd);
+                  janelaPopUp.abre2( "example", 'p black',  '<img src="../assets/img/new_logo.png" width=40 height=40><br>Data Added Successfully' ,  '');
+                  setTimeout(function(){janelaPopUp.fecha('example');}, 1100);
+                }
+              }
+            }
+          }
+        function sendimage2(){
+            icount2++;
+            if(ncount2==0){
+              let d1 =document.querySelector('#board').value;
+              let d2 =document.querySelector('#trust').value;
+              let d4 =document.querySelector('#principal').value;
+              let d3 =document.querySelector('#director').value;
+              let pa =document.querySelector('#Principalabt').value;
+              let pn =document.querySelector('#Principalname').value;
+              let pd =document.querySelector('#Principaldesig').value;
+              let da =document.querySelector('#Directorabt').value;
+              let dn =document.querySelector('#Directorname').value;
+              let dd =document.querySelector('#Directordesig').value;
+
+                if(d1 == "" || d2 == "" || d3 == ""||d4==""){
+                  alert(" Please enter details in all the feilds ")
+                }else{
+                  const  storageService = firebase.storage();
+                  var uploadTask=storageService.ref(selectedFile.name).put(selectedFile);
+                  console.log(selectedFile.getDownloadURL);
+                  uploadTask.on('state_changed', function(snapshot){
+                    var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    uploader.value = percentage;
+                    progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+                    document.getElementById("demo").innerHTML = progress;
+                      switch (snapshot.state) {
+                        case firebase.storage.TaskState.PAUSED: // or 'paused'
+                        document.getElementById("demo").innerHTML = "Upload Paused";
+                        console.log('Upload is paused');
+                        break;
+                        case firebase.storage.TaskState.RUNNING: // or 'running'
+                        document.getElementById("demo").innerHTML = "File is uploading"+ " "+progress+"%";
+
+                        break;
+                      }
+                  },function(error){
+                      console.log(error);
+                        // Handle unsuccessful uploads
+                      }, function() {
+                  document.getElementById("demo").innerHTML = "Uploaded"+ " "+progress+"%";
+                  uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                  
+                  urls2 = downloadURL;
+
+                  var answer=window.confirm("Are you sure, you want to Update the data ?")
+                  if(answer){
+                    sendMessageMain(d1, d2 , d3 ,urls2,d4,pn,pa,pd,dn,da,dd);
+                    janelaPopUp.abre2( "example", 'p black',  '<img src="../assets/img/new_logo.png" width=40 height=40><br>Data Added Successfully' ,  '');
+                    setTimeout(function(){janelaPopUp.fecha('example');}, 1100);
+
+                  }
+                  
+                  // window.location="CrewDetails.html"
+                });
+                });
+
+              }
+            }
+            
+        }
           
       
 
@@ -638,12 +849,33 @@ The above copyright notice and this permission notice shall be included in all c
         vision=sc[k].Vision;
         mission=sc[k].Mission;
         image=sc[k].Image;
-       
+        b=sc[k].Board;
+        t=sc[k].Trust;
+        p=sc[k].Principal;
+        d=sc[k].Director;
+        Img=sc[k].ImageMain
+        pa=sc[k].PA
+        pn=sc[k].PN
+        pd=sc[k].PD
+        da=sc[k].DA
+        dn=sc[k].DN
+        dd=sc[k].DD
         $('#d1').val(d1)
         $('#d2').val(d2)
         $('#d3').val(d3)
         $('#vission').val(vision)
         $('#mission').val(mission)
+        $('#board').val(b)
+        $('#trust').val(t)
+        $('#principal').val(p)
+        $('#director').val(d)
+        $('#Principalname').val(pn)
+        $('#Principalabt').val(pa)
+        $('#Principaldesig').val(pd)
+        $('#Directorname').val(dn)
+        $('#Directorabt').val(da)
+        $('#Directordesig').val(dd)
+        document.getElementById("imgsmain").src=Img
         document.getElementById("imgs").src=image
        }
 
@@ -664,6 +896,16 @@ The above copyright notice and this permission notice shall be included in all c
       function sendMessage2(Description , MainDescription1 ,MainDescription2 ,Vision,Mission){
 
           firebase.database().ref('About').child('-MGDIeg4347oMaD5sizL').update({Description,MainDescription1,MainDescription2,Vision,Mission})
+          
+      }
+      function sendMessageMain2(Board , Trust , Director ,Principal,PN,PA,PD,DN,DA,DD){
+
+          firebase.database().ref('About').child('-MGDIeg4347oMaD5sizL').update({Board , Trust , Director ,Principal,PN,PA,PD,DN,DA,DD})
+          
+      }
+       function sendMessageMain(Board , Trust , Director ,ImageMain,Principal,PN,PA,PD,DN,DA,DD){
+
+          firebase.database().ref('About').child('-MGDIeg4347oMaD5sizL').update({Board , Trust , Director ,ImageMain,Principal,PN,PA,PD,DN,DA,DD})
           
       }
   </script>
