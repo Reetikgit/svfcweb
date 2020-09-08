@@ -1,11 +1,4 @@
-/*!
-*  - v1.2.1
-* Homepage: http://bqworks.com/slider-pro/
-* Author: bqworks
-* Author URL: http://bqworks.com/
-*/
-/* Core
---------------------------------------------------*/
+
 .slider-pro {
 	position: relative;
 	margin: 0 auto;
@@ -16,7 +9,7 @@
 
 .sp-slides-container {
 	position: relative;
-	margin-top: 3%;
+	margin-top: 2%;
 
 }
 
@@ -34,12 +27,14 @@
 .sp-slide {
 	position: absolute;
 	text-align: center;
-	background: red;
+	background:black;
+	height: 200px;
 
 }
 
 .sp-image-container {
 	overflow: hidden;
+	position: absolute;
 
 }
 

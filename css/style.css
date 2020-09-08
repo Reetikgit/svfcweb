@@ -713,6 +713,7 @@ header.page-header .main-menu{
 	padding: 0;
 	position: fixed;
 	border: none;
+
 	/* box-shadow: 0px 1px 1px #dedede; */
 }
 .navbar .container {
@@ -727,21 +728,25 @@ header.page-header .main-menu{
 .minified .container {
     /* background: #fff; */
     border-radius: 4px;
-    padding: 5px 15px;
     margin-top: 0px;
+   
+
 }
+
 header.page-header .main-menu.minified{
 	position: fixed;
 }
 .collapse.in{
-	    float: left;
+	 float: left;
     width: 100%;
 }
  
 .slider{
 	overflow: hidden;
 	background-color: #2A2B32;
+	
 }
+
  .img-overlayabt{
  		position: absolute;
  		width: 50%;
@@ -1714,6 +1719,7 @@ footer ul li a i{
 		font-weight: bolder;
 		font-variant: initial;
 		letter-spacing: 3px;
+		transition: all .5s linear;
 	}
 	.fgc{
 		position: absolute;
@@ -1727,6 +1733,7 @@ footer ul li a i{
 	    font-weight: bolder;
 	    text-transform: uppercase;
 	    margin-left: -2%;
+	    transition: all .5s linear;
 	    
 	}
 	.quotes{
@@ -1739,11 +1746,53 @@ footer ul li a i{
 	    text-transform: initial;
 	    font-weight: bolder;
 	    margin-left: -2%;
+
 	    
+	}
+	.main-menu.minified{
+		height: 70px;
+		transition: all .5s linear;
+		/* box-shadow: 0px 1px 1px #dedede; */
+	}
+
+	.minified .container {
+	    /* background: #fff; */
+	    height: 70px;
+	    transition: all .5s linear;
+
+	}
+	.minified .mainhead {
+	    /* background: #fff; */
+	    font-size: 1.9em;
+	 	transition: all .5s linear;
+
+	}
+
+	.minified .fgc {
+	    /* background: #fff; */
+	    font-size: 1em;
+	    margin-top: 2%;
+	    transition: all .5s linear;
+
+	}
+	.minified .quotes {
+	    /* background: #fff; */
+	    font-size: 1em;
+	    margin-top:4%;
+	    transition: all .5s linear;
+
+	}
+	.minified .navbar-brand img {
+		margin-left:-8%;
+	    height: 70px;
+	    width: 80px;
+	    object-fit: contain;
+	    transition: all .5s linear;
 	}
 	.navbar-brand {
 		margin-left:-8%;
 	    height: 100px;
+	    transition: all .5s linear;
 	}
 	  
 	}
@@ -1927,6 +1976,8 @@ footer ul li a i{
 	.onlyweb{
 		display: none;
 	}
+
+
 
 	.navbar-toggler {
 	    padding: .5rem .75rem;
