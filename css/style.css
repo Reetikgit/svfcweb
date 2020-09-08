@@ -1,8 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
-@import url(https://fonts.googleapis.com/css?family=Muli);
+
 
 body {
-  font-family: 'Open Sans', sans-serif;
+
   background: #ffffff;
   font-size: 14px;
   font-weight: 400;
@@ -1671,9 +1670,15 @@ footer ul li a i{
 	.headname{
 		margin-top: 2%;
 		font-size: 1em;
+		
+
 	}
 	.main-menu{
 		margin-top:2.0%;
+	}
+	.showdown{
+		margin-left: 0%;
+		margin-right: 35%;
 	}
 	.runningquotes{
 		position: relative;
@@ -1688,11 +1693,7 @@ footer ul li a i{
 	    font-weight: bolder;
 	    color: black;  
 	}
-	.mainhead{
-		color:  #4b2822;
-		font-family: futu;
-		font-size:1.9em;
-	}
+
 	.webquote{
 		position: fixed;
 		z-index: 1099;
@@ -1704,15 +1705,40 @@ footer ul li a i{
 	.hidequote{
 		display: none;
 	}
-	.quotes{
-		position: relative;
+	.mainhead{
+		color:  #4b2822;
+	
+		font-size:3.4em;
+		margin-left: 1%;
+		position: absolute;
+		font-weight: bolder;
+		font-variant: initial;
+		letter-spacing: 3px;
+	}
+	.fgc{
+		position: absolute;
 		font-family: kutu;
-		margin-top: -2%;
+		margin-top:3.5%;
+		color: black;
+	    font-size: 1.3rem;
+	    font-weight: bold;
+	    letter-spacing: 3px;
+	    text-transform: initial;
+	    font-weight: bolder;
+	    text-transform: uppercase;
+	    margin-left: -2%;
+	    
+	}
+	.quotes{
+		position: absolute;
+		font-family: kutu;
+		margin-top: 6%;
 	    font-size: 1rem;
 	    font-weight: normal;
 	    font-style: italic;
 	    text-transform: initial;
 	    font-weight: bolder;
+	    margin-left: -2%;
 	    
 	}
 	.navbar-brand {
@@ -1806,15 +1832,25 @@ footer ul li a i{
   .hidequote{
   	display: none;
   }
-  .quotes{
-  	position: relative;
-  	font-family: kutu;
+  .mainhead{
+  margin-top: 0%;
+  font-size: 2em;
+  font-weight: 999;
+  }
+  .fgc{
+  	position: absolute;
   	margin-top: -2%;
-      font-size: 1rem;
-      font-weight: normal;
-      font-style: italic;
-      text-transform: initial;
-      font-weight: bolder;
+  	font-weight:999;
+  	font-size: 1em;
+      
+  }
+  .main-menu .navbar-nav li a:hover,
+  .main-menu .navbar-nav li.active a{
+
+      padding: 0px;
+  }
+  .quotes{
+  	font-style: italic;
       
   }
   .navbar-brand {
@@ -1915,21 +1951,21 @@ footer ul li a i{
 		height: 4%;
 		border-radius: 0px 0 0px 0px;
 	}
-	.quotes{
-		position: relative;
-		font-family: futu;
-		margin-top: -4%;
-	    font-size: 1rem;
-	    font-weight: normal;
-	    font-style: italic;
-	    text-transform: initial;
-	    font-weight: bolder;
+	.mainhead{
+	margin-top: -4%;
+	font-size: 2em;
+	font-weight: 999;
+	}
+	.fgc{
+		position: absolute;
+		margin-top: -5%;
+		font-weight:999;
+		font-size: 1em;
 	    
 	}
-	.mainhead{
-		color:  #4b2822;
-		font-family: futu;
-		font-size:1.5em;
+	.quotes{
+		font-style: italic;
+	    
 	}
 	.runningquotes{
 		position: relative;
@@ -2138,7 +2174,22 @@ footer ul li a i{
   .portfolio-items .portfolio-item {
     width: 50%;
   }
-
+  .mainhead{
+  margin-top: -3%;
+  font-size: 2em;
+  font-weight: 999;
+  }
+  .fgc{
+  	position: absolute;
+  	margin-top: -3%;
+  	font-weight:999;
+  	font-size: 1em;
+      
+  }
+  .quotes{
+  	font-style: italic;
+      
+  }
 }
 .marquee:before,
 .marquee:after {
@@ -2218,10 +2269,11 @@ footer ul li a i{
   top: 20px;
   right: 30px;
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+  color: red;
+  font-weight: 999;
 }
 .popup .close:hover {
   color: #06D85F;
@@ -2229,6 +2281,15 @@ footer ul li a i{
 .popup .content {
   max-height: 30%;
 
+}
+@media screen and (min-width: 800px) {
+  .box {
+    width: 100%;
+  }
+  .popup {
+    width: 100%;
+    height: 80%;
+  }
 }
 @media screen and (max-width: 700px) {
   .box {

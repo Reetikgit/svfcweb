@@ -313,7 +313,7 @@
                         <thead class="text-warning" >
                           <th>Image</th>
                           <th>Name</th>
-                          <th>Edit Image</th>
+                 <!--          <th>Edit Image</th> -->
                           <th>Edit Text</th>
                           <th>Status</th>
                           <th>Edit Status</th>
@@ -730,7 +730,7 @@
             else{
               btnstatus="Activate"
             }
-            document.getElementById("facility").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td><textarea id="facname'+i+'"></textarea>&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateFacilityName("'+k+'","facname'+i+'")></i></td><td><input type="file" id="changeimg'+i+'" accept="image/*"><progress value="0" max = "100" id="uploader'+i+'" > 0%</progress></td><td><textarea row="14" style="height:9em" id="fac'+i+'"></textarea>&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateFacilitytext("'+k+'","fac'+i+'")></i></td><td>'+status+'</td><td><button type="submit" onclick=updateFacility("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick=removeFacility("'+k+'")>delete</i></button></td></tr>'
+            document.getElementById("facility").innerHTML+='<tr><td><img src="'+urls+'" width="70" height="70" style="object-fit: contain"></td><td><textarea id="facname'+i+'"></textarea>&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateFacilityName("'+k+'","facname'+i+'")></i></td><td><textarea row="14" style="height:9em" id="fac'+i+'"></textarea>&nbsp;&nbsp;<i class="fa fa-check" style="cursor:pointer" onclick=updateFacilitytext("'+k+'","fac'+i+'")></i></td><td>'+status+'</td><td><button type="submit" onclick=updateFacility("'+k+'") style="background-color:#ffffff;border:1px groove black;border-radius:5px;:" >'+btnstatus+'</button></td><td class="td-actions text-right "><button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm"><i class="material-icons" onclick=removeFacility("'+k+'")>delete</i></button></td></tr>'
               document.getElementById("fac"+i).innerHTML=data;
               document.getElementById("facname"+i).innerHTML=name;
           }

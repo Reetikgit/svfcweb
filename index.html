@@ -131,12 +131,10 @@
         <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
             <i class="fa fa-bars" style="font-size: 1.4em"></i>
         </button> 
-         <a class="navbar-brand page-scroll" href="#slider"><img class="logo" id="logo" src="images/logo.png" alt="logo" width="80" style="display: flex;float: left;margin-top: 1%;"><h3 class="headname" style=""><span class="mainhead">Sai Vidya</span> First Grade College</h3><h5 class="quotes">Learn to Lead</h5>
-
-
-        <!--    <marquee  class="hidequote" style="background-color: rgb(194, 123, 23,0.6);border-radius: 20px 0 20px 0">
-
-            <h5 class="runningquotes">COLLEGE BUSSES ARE AVAILABLE FOM ALL THE ROUTES</h5></marquee> --></a>
+         <a class="navbar-brand page-scroll" href="#slider" ><img class="logo" id="logo" src="images/logo.png" alt="logo" width="80" style="display: flex;float: left;margin-top: 1%;"></a>
+         <h3 class="mainhead">SAI VIDYA</h3>
+        <span class="fgc">First Grade College</span>
+        <span class="quotes">Learn To Lead</span>
 
          
         <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
@@ -643,6 +641,7 @@
                     <a href="#programme" ><p class="linkd">PROGRAMME</p></a>
                     <a href="#recruiters"  ><p class="linkd">RECRUITERS</p></a>
                     <a href="#fac"  ><p class="linkd">FACILITIES</p></a>
+                    <a href="faculty.html"  ><p class="linkd">FACULTY</p></a>
                     <a href="http://saividya.ac.in/" ><p  class="linkd">SVIT - BENGALURU</p></a>
                     <a href="#why" ><p  class="linkd">Why Us</p></a>
                     <a href="#enquiry" ><p  class="linkd">ENQUIRY</p></a>
@@ -889,6 +888,7 @@
             messagingSenderId: "999855456006",
             appId: "1:999855456006:web:c12afd817a3ee49672a887"
           };
+
           // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
           sndbtn.addEventListener('click',sendEnquiry)
@@ -1046,16 +1046,30 @@
 
             var sc =data.val();
             var keys=Object.keys(sc)
+            var count=0;
+            var arr=[];
+            var arrimg=[];
+            var j=-1;
             for(var i=0;i<keys.length;i++){
                 var k=keys[i];
-                var url=sc[k].Image;
-                var data=sc[k].SliderData;
                 var status=sc[k].Status
+                var data=sc[k].SliderData;
+                
                 // alert("img"+i+"")
                 if(status=="Active"){
-                   document.getElementById("img"+i+"").src=url;
-                   document.getElementById("data"+i+"").innerHTML=data; 
+                    var url=sc[k].Image
+                    j++;
+                   document.getElementById("img"+j+"").src=url;
+                   document.getElementById("data"+j+"").innerHTML=data; 
+                   // arrimg[i]=url;
                 }
+
+            }
+            for(var j=1;j<=arr.length;j++){
+                // alert("img"+i+"")
+                
+   
+                
 
             }
 
