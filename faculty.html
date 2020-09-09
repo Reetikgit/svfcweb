@@ -103,6 +103,13 @@
              margin: 0;
            }
         }
+        .popupimg{
+          float:right;
+          object-fit:contain; 
+          width: 400px;
+          height: 300px;
+          border:2px solid brown;
+          }
 </style>
 <body>
     <div class="webquote marquee">
@@ -503,8 +510,7 @@
                            <p style="font-weight:999">
                            `+desig+`
                            </p>
-                    
-                           <p>`+desc+`</p>
+                   
                          <a href="#popup`+i+`" onclick="showpopup(`+i+`)" class="btn">More Details</a>
                        </div>
                    </div>
@@ -513,7 +519,7 @@
 
                       <div class="popup">
                      
-                      <img src="`+image+`" alt="Custom Image" style="float:right;object-fit:contain;border:2px solid black;border-radius:50px" >
+                      <img src="`+image+`" alt="Custom Image" class="popupimg"  >
                         <h2>`+name+`</h2>
                          <p>`+desig+`</p>
                         <div class="content">
@@ -530,7 +536,7 @@
                             Loading... 
                           </ul>
                         </div>
-                        <a class="close" href="#services">&times;</a>
+                        <a class="close" onclick=closeme("popup`+i+`")>&times;</a>
                     
                         
                       </div>
@@ -587,6 +593,9 @@
          }
          function showpopup(index){
              document.getElementById("popup"+index).style.display="block"
+         }
+         function closeme(index){
+            document.getElementById(index).style.display="none"
          }
          function showpopup2(index){
              document.getElementById("popup2"+index).style.display="block"
