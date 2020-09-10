@@ -1141,6 +1141,7 @@
             var arr=[];
             var txt=""
             var newtxt=""
+
             for(i=0;i<keys.length;i++){
                
                 var k=keys[i];
@@ -1158,13 +1159,26 @@
             }
             var edit=txt.split("/*");
             for(var j=0;j<edit.length;j++){ 
-                    
-            document.getElementById("runningquote").innerHTML+=
-            `
-            <b><li style="font-size:1.2em;font-weight:bolder;font-style:italic">`+edit[j]+`</li><br><br></b>
-            `
-        }
-             
+                var modification=edit[j].split(" ");
+                for(var k=0;k<modification.length;k++){
+                    if(modification[k].includes("**")){
+                        modification[k]=modification[k].substring(2)
+                        newtxt+='<b style="font-weight:999;color :black;text-decoration:underline">'+modification[k]+'</b>';
+                    }else{
+                          newtxt+=modification[k]+" ";
+                    }
+                }
+                newtxt+="*/*"  
+            }
+          
+            var newedit=newtxt.split("*/*")
+            for(var l=0;l<newedit.length;l++){
+                    document.getElementById("runningquote").innerHTML+=
+                    `
+                    <b><li style="font-size:1.2em;font-weight:bolder;font-style:italic">`+newedit[l]+`</li><br><br></b>
+                `
+            }
+                 
         }
           
           function showDataAbout(data) {
