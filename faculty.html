@@ -500,6 +500,8 @@
                 var status=sc[k].Status
                 var desc=sc[k].Description;
                 var image=sc[k].Image
+                var certificate=sc[k].Certification
+                var paper=sc[k].Papers
                 // var certify=sc[k].Certificate.split("\n");
                 // var paper=sc[k].Papers.split("\n");
 
@@ -532,15 +534,15 @@
                         <div class="content">
                            <h3>Description</h3>
                           <ul style="" id="po`+i+`">
-                            Loading ...                   
+                            `+desc+`                   
                           </ul>
                           <h3>Certification</h3>
                           <ul id="peo`+i+`">
-                            Loading... 
+                            `+certificate+`
                           </ul>
                           <h3>Paper's Published</h3>
                           <ul id="seo`+i+`">
-                            Loading... 
+                            `+paper+`
                           </ul>
                         </div>
                         <a class="close" onclick=closeme("popup`+i+`")>&times;</a>
