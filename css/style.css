@@ -663,7 +663,7 @@ header.page-header .main-menu{
     -ms-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
-    padding: 40px 15px;
+    padding: 40px 10px;
 	color:#ffffff;
 	font-weight: bolder;
      background-color:rgb(150,90,110,1.9);
@@ -1811,6 +1811,10 @@ footer ul li a i{
 }
 @media only screen and (max-width:500px) {
 
+	.traingle{
+		border-radius:0px 50px 0px 0px;width:100% !important;font-size: 10px !important;
+		font-weight: 700 !important;
+	}
 	.quotes{
 		
 		font-size: 9px;
@@ -2854,3 +2858,124 @@ body, html, root, document{
     max-width: 1265px !important;
 }
 }
+.traingle{
+	background-color:#827717 ;color:white;padding:10px;border-radius:0px 100px 0px 0px;width:50%;font-size: 10px !important;
+	font-weight: 700 !important;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  li.item {
+	width: 15%;
+	height: 5rem;
+	margin: 2rem;
+	background-color: #FFFFFF;
+	display: inline-block;
+	position: relative;
+	
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  li:hover {
+	box-shadow: 10px 14px 45px rgba(0, 0, 0, 0.1);
+  }
+  
+  li .item-image {
+	position: relative;
+	line-height: 5rem;
+	font-size: 2rem;
+	text-align: center;
+	background-color: #BF360C;
+	color:white;
+	font-weight: 600;
+  }
+  
+  li .item-detail {
+	padding: 0 1rem;
+	left: 0px;
+	top: 100%;
+	position: absolute;
+	height: 50px;
+	line-height: 10px;
+	width: 100%;
+	background-color: #FF8A65;
+	font-size: 1rem;
+	font-weight: strong;
+  }
+
+	em {
+	  float: right;
+	  color: #666;
+	}
+		
+  
+  
+  li .item-detail:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+  }
+  
+  li a {
+	font-size: 1rem;
+	text-decoration: none;
+	color: #666;
+  }
+  
+  li div {
+	position: absolute;
+  }
+  
+  
+  @media screen and (max-width: 68.125em) {
+	  li.item {
+		  width: 41%;
+	  }
+  }
+  
+  @media screen and (max-width: 46.125em) {
+	  li.item {
+		  width: 80%;
+	  }
+  }
+  .blinking{
+    animation:blinkingText 0.8s infinite;
+	font-weight: 700;
+}
+@keyframes blinkingText{
+    0%{     color: red;    }
+    59%{    color: red; }
+    60%{    color: transparent; }
+    79%{    color:transparent;  }
+    100%{   color: red;    }
+}
+.text-red{
+	color:red;
+	font-weight:600 ;
+}
+#menu {
+	position: fixed;
+	right: 0;
+	top: 50%;
+	width: 8em;
+	margin-top: -2.5em;
+	list-style: none;
+	background-color: #F4511E;
+	padding: 7px;
+	z-index: 100;
+	cursor: pointer;
+  }
+  #menu:hover{
+	  background-color: pink;
+  }
+  .sticky{
+	  color: white;
+	  font-weight: 600;
+  }
+  .text-green{
+	  color :green;
+	  font-weight: 700;
+  }

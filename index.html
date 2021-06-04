@@ -21,11 +21,84 @@
     <link rel="stylesheet" href="css/owl.transitions.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="elegant_font/style.css"> 
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/logo.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 </head>
 <style type="text/css">
+
+.title h3{
+    font-size: 25px !important;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    line-height: 1.4em !important;
+    font-weight: 300;
+}
+
+/* alerts */
+
+.alert {
+ padding: 0px !important;
+}
+
+.alert .alert-icon {
+    display: block;
+    float: left;
+    margin-right: 1.071rem;
+}
+
+.alert b {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+.alert .close {
+    color: #fff;
+    text-shadow: none;
+    opacity: .9;
+}
+.alert .close i {
+    font-size: 20px;
+}
+.alert .close:hover{
+    opacity: 1;
+    color: #fff;
+}
+.alert.alert-info {
+    background-color: transparent;
+    color: red;
+    border:none;
+}
+
+.alert.alert-success {
+    background-color: #55b559;
+    color: #fff;
+}
+
+.alert.alert-warning {
+    background-color: #ff9e0f;
+    color: #fff;
+}
+
+.alert.alert-danger {
+    background-color: #f55145;
+    color: #fff;
+}
+
+.alert.alert-primary {
+    background-color: #a72abd;
+    color: #fff;
+}
     .marquee {
           margin: 0 auto;
           width: 100%;
@@ -136,8 +209,8 @@
         <a class="navbar-brand page-scroll" href="#slider" ><img class="logo" id="logo" src="images/logo.png" alt="logo" width="90" style="display: flex;float: left;margin-top: 1%;"></a>
         <h3 class="mainhead">SAI VIDYA</h3>
         <span class="fgc">First Grade College</span>
-        <span class="quotes" >Affiliated to "BENGALURU CITY UNIVERSITY"</span>
-        <!-- <span class="quotes">Learn To Lead</span> -->
+        <span class="quotes" style="color: red;" >Affiliated to "BENGALURU CITY UNIVERSITY"</span>
+        <!--    <span class="quotes" style="color: red;" >Affiliated to "BENGALURU CITY UNIVERSITY"</span> -->
 
          
         <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
@@ -169,8 +242,8 @@
                         <li>
                             <a href="#enquiry">Contact</a>
                         </li>
-                        <li>
-                            <a href="index.html#enquiry">documents</a>
+                        <li >
+                            <a href="documents.html" style="word-wrap: break-word;"> Documents</a>
                         </li>
             </ul> 
         </div>
@@ -183,14 +256,243 @@
 
 
     <section class="slider-pro slider" id="slider">
-        <div class="sp-slides" id="bannerSlider" >
-         
+        <div class="sp-slides" >
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="images/slide11.jpeg"  alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" >WELCOME TO SAI VIDYA FIRST GRADE COLLEGE</span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img0" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data0"></span>
+                    </h1> 
+                    
+                </div>
+            </div> 
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img1" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data1"></span>
+                    </h1> 
+                    
+                </div>
+            </div> 
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img2" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data2"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img3" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data3"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img4" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data4"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="images/slide7.jpeg" id="img5" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data5"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img6" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data6"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img7" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data7"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img8" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data8"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
+            <div class="sp-slide main-slides">
+                <!-- <%  %> -->
+                <div class="img-overlay"></div>
+                <div class="img-overlay2"></div>
+                <img class="sp-image" style="" src="https://miro.medium.com/max/1080/0*DqHGYPBA-ANwsma2.gif" id="img9" alt="Slider 1"/>
+                <div class="caption">
+                    <h1 class="sp-layer slider-text-big"
+                    data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
+                    <span class="highlight-texts" id="data9"></span>
+                    </h1> 
+                    
+                </div>
+            </div>
         </div>
     </section>
     
     <!-- Main Slider End -->
+    <div class="container mt-5" style="padding: 10px;">
+       
+        <div class="alert alert-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12 custom-sec-img wow fadeIn" >
+                        <div class="title">
+                            <h3 class="traingle" >Professional Courses training</h3>
+                          </div>
+                      
+                          <div class="alert alert-info">
+                              <div class="container">
+                                  <!-- <div class="alert-icon">
+                                      <i class="material-icons">info_outline</i>
+                                  </div>
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                      <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                                  </button>
+                  
+                                  <b>Info alert:</b> You've got some friends nearby, stop looking at your phone and find them... -->
+                                  <ul class="item-list">
+                                    <li class="item">
+                                      <div class="item-image">CS</div>
+                                    
+                                          
+                                    </li>
+                                    <li class="item">
+                                      <div class="item-image">CA</div>
+                                    
+                                        
+                                    </li>
+                                    <li class="item">
+                                      <div class="item-image">CMA</div>
+                                    
+                                     
+                                    </li>
+                                 
+                                    
+                                  </ul>
+                              </div>
+                          </div> 
+                    </div>
+                    <ul id=menu>
+                        <li class="sticky" onclick="openAdmissionPage()">Admission</li>
+                      
+                    </ul>
+                    <div class="col-md-4 col-sm-6 col-xs-12 custom-sec-img wow fadeIn" style="border:2px solid black;border-radius:20px">
+                        <div class="title">
+                            <h3 class="traingle">Events & Notifications</h3>
+                          </div>
+                      
+                          <div class="alert alert-info">
+                              <div class="container">
+                                  <div class="alert-icon">
+                                      <i class="material-icons">info_outline</i>
+                                  </div>
+                                   <a href="admission.html" class="blinking">Admission Open for the Academic Year 2021 and 2022</a>
+                              </div>
+                              <div class="container">
+                                <div class="alert-icon">
+                                    <i class="material-icons">info_outline</i>
+                                </div>
+                                <a href="#!"  class="text-green"> Discount or Scholarship available for meritorious Students  </a>
+                            </div>
+                              <div class="container">
+                                <div class="alert-icon">
+                                    <i class="material-icons">info_outline</i>
+                                </div>
+                                <a href="documents.html"  class="text-green">Check out our affiliations now </a>
+                            </div>
+                                                      
+                            <!-- <div class="container">
+                                <div class="alert-icon">
+                                    <i class="material-icons">info_outline</i>
+                                </div>
+                                <b>Info alert:</b> You've got some friends nearby, stop looking at your phone and find them...
+                                
+                            </div>
+                            <div class="serviceox">
+                                <a href="about.html" class="btn">See All</a>
+                            </div> -->
+                          </div> 
+                    </div>
 
-
+                </div>
+               
+            </div>
+        </div>
+    </div>
     <section id="about" class="about-sec section-wrapper description " style=" background: -webkit-linear-gradient(left, rgb(92, 51, 125,0.4), white 70%);">
         <div class="container">
 
@@ -439,7 +741,7 @@
 
                     <!-- Contact Form -->
         <div class="col-md-6  contact-form wow bounceInRight" style="border:2px solid orange"> 
-        <h2 style="text-align: center;"><span class="highlight-text">ENQUIRY</span></h2>
+        <h2 style="text-align: center;"><span class="highlight-text">CONTACT</span></h2>
         <!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
        
         <div class="col-md-6">
@@ -498,13 +800,15 @@
                     <hr style="color: red;background-color: red;">
                     <a href="#"><p  class="linkd">HOME</p></a>
                     <a href="about.html"><p class="linkd">ABOUT</p></a>
+                    <a href="documents.html"><p class="linkd">Mandatory Documents</p></a>
+                    
                     <a href="#programme" ><p class="linkd">PROGRAMME</p></a>
                     <a href="#recruiters"  ><p class="linkd">RECRUITERS</p></a>
                     <a href="#fac"  ><p class="linkd">FACILITIES</p></a>
                     <a href="faculty.html"  ><p class="linkd">FACULTY</p></a>
                     <a href="http://saividya.ac.in/" ><p  class="linkd">SVIT - BENGALURU</p></a>
                     <a href="#why" ><p  class="linkd">Why Us</p></a>
-                    <a href="#enquiry" ><p  class="linkd">ENQUIRY</p></a>
+                    <a href="#enquiry" ><p  class="linkd">CONTACT</p></a>
                 </div>
 
                 <div class="col-md-4 contac-us">
@@ -584,7 +888,9 @@
     <script src="js/custom.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase.js"></script>
     <script type="text/javascript">
-        
+        function openAdmissionPage(){
+            window.location="admission.html"
+        }
         $(function () {
         var current_button = 0;
         
@@ -761,14 +1067,19 @@
           // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
           sndbtn.addEventListener('click',sendEnquiry)
-          let formMessage=firebase.database().ref('SliderImages')
+          setTimeout(function(){
+            let formMessage=firebase.database().ref('SliderImages')
+            formMessage.on('value',showData,errData)
+          },2000)
+       
           let formAbout=firebase.database().ref('About')
           let formText=firebase.database().ref('RunningText')
           let formProgramme=firebase.database().ref('Programme')
           let formRec=firebase.database().ref('Recruiters')
           let formFac=firebase.database().ref('Facility')
           let formEnq=firebase.database().ref('Enquiry')
-          formMessage.on('value',showData,errData)
+
+          
           formAbout.on('value',showDataAbout,errData)
           formText.on('value',showText,errData)
           formProgramme.on('value',showProgramme,errData)
@@ -919,7 +1230,6 @@
             var arr=[];
             var arrimg=[];
             var j=-1;
-           
             for(var i=0;i<keys.length;i++){
                 var k=keys[i];
                 var status=sc[k].Status
@@ -927,35 +1237,19 @@
                 
                 // alert("img"+i+"")
                 if(status=="Active"){
-                   
                     var url=sc[k].Image
-                    document.getElementById("bannerSlider").innerHTML+=`
-                    <div class="sp-slide main-slides">
-                        <!-- <%  %> -->
-                        <div class="img-overlay"></div>
-                        <div class="img-overlay2"></div>
-                        <img class="sp-image" style="" src="`+url+`"  alt="Slider 1"/>
-                        <div class="caption">
-                            <h1 class="sp-layer slider-text-big"
-                            data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
-                            <span class="highlight-texts" >`+data+`</span>
-                            </h1> 
-                            
-                        </div>
-                    </div>
-                    `
-                  
-  
-                //     j++;
-                //    document.getElementById("img"+j+"").src=url;
-                //    document.getElementById("data"+j+"").innerHTML=data; 
+                    j++;
+                   document.getElementById("img"+j+"").src=url;
+                   document.getElementById("data"+j+"").innerHTML=data; 
                    // arrimg[i]=url;
                 }
 
             }
+
+            }
             
 
-          }
+          
           function showRec(data) {
 
             var sc =data.val();

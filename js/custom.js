@@ -142,11 +142,7 @@ $(window).stellar({
 
 /* ------------ Home Slider ------------- */
 var index=0;
-let sliderTime=setInterval(function() {
-  index++;
-  if(index==3){
-    clearInterval(sliderTime)
-  }
+
   $( '#slider' ).sliderPro({
     width: '100%',
       height: 650,
@@ -162,9 +158,7 @@ let sliderTime=setInterval(function() {
           }
     }
   });
-   
-},2500)
 
+})
 
-});
 
