@@ -691,7 +691,7 @@
          <a class="navbar-brand page-scroll" href="#slider" ><img class="logo" id="logo" src="images/logo.png" alt="logo" width="90" style="display: flex;float: left;margin-top: 1%;"></a>
          <h3 class="mainhead">SAI VIDYA</h3>
         <span class="fgc">First Grade College</span>
-           <span class="quotes" style="color: red;" >Affiliated to "BENGALURU CITY UNIVERSITY"</span>
+        <span class="quotes" style="color: red;" >Affiliated to Bengaluru city university & approved by GOK</span>
          
         <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
 
@@ -723,7 +723,7 @@
                             <a href="index.html#enquiry">Contact</a>
                         </li>
                         <li >
-                            <a href="documents.html" style="word-wrap: break-word;"> Documents</a>
+                            <a href="documents.html" style="word-wrap: break-word;"> Mandatory Disclosure</a>
                         </li>
             </ul> 
         </div>
@@ -793,7 +793,7 @@
                     <a href="index.html#recruiters"  ><p class="linkd">RECRUITERS</p></a>
                     <a href="index.html#fac"  ><p class="linkd">FACILITIES</p></a>
                     <a href="http://saividya.ac.in/" ><p  class="linkd">SVIT - BENGALURU</p></a>
-                    <a href="index.html#why" ><p  class="linkd">Why Us</p></a>
+                    <a href="index.html#why" ><p  class="linkd">WHY US</p></a>
                     <a href="index.html#enquiry" ><p  class="linkd">CONTACT</p></a>
                 </div>
 
@@ -810,7 +810,7 @@
                             <a  href="tel:+918028468191"><li><i class="fa fa-phone"></i>+91-80-28468191</li></a>
                             <a href="tel:+918028468191"><li><i class="fa fa-phone"></i>+91-80-28468191</li></a>
 
-                            <li><a href="mailto:svfcwebmail@gmail.com"><i class="fa fa-envelope-o"></i>svfcwebmail@gmail.com</li></a>
+                            <li><a href="mailto:principalsvfc@saividya.ac.in"><i class="fa fa-envelope-o"></i>principalsvfc@saividya.ac.in</li></a>
                         </ul> 
                         <br>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.9063061854727!2d77.556057514098!3d13.168307190727047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae21e08de3c30f%3A0x5570d051db765863!2sSai%20Vidya%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1599746158168!5m2!1sen!2sin" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" style="object-fit: cover;margin-top: 12%;"></iframe>
@@ -1042,11 +1042,61 @@
           };
           // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
-          let formProgramme=firebase.database().ref('Faculty')
           let formText=firebase.database().ref('RunningText')
-          formProgramme.on('value',showProgramme,errData)
-
+          // formMessage.on('value',showData,errData)
+          
           formText.on('value',showText,errData)
+
+             function showText(data) {
+               var txt=""
+               var sc =data.val();
+               var keys=Object.keys(sc)
+               var i=0;
+               var arr=[];
+               var txt=""
+               var newtxt=""
+
+               for(i=0;i<keys.length;i++){
+                  
+                   var k=keys[i];
+                   var priority=sc[k].Priority;
+                   arr[i]=priority;
+
+                   var data=sc[k].Data;
+                   var status=sc[k].Status;
+                   
+                   arr.sort();
+                   if(status=="Active"){
+                    txt+=data+"/*"
+                   }
+                  
+               }
+               var edit=txt.split("/*");
+               for(var j=0;j<edit.length;j++){ 
+                   var modification=edit[j].split(" ");
+                   for(var k=0;k<modification.length;k++){
+                       if(modification[k].includes("**")){
+                           modification[k]=modification[k].substring(2)
+                           newtxt+='<b style="font-weight:999;color :black;text-decoration:underline">'+modification[k]+'</b>';
+                       }else{
+                             newtxt+=modification[k]+" ";
+                       }
+                   }
+                   newtxt+="*/*"  
+               }
+             
+               var newedit=newtxt.split("*/*")
+               for(var l=0;l<newedit.length;l++){
+                       document.getElementById("runningquote").innerHTML+=
+                       `
+                       <b><li style="font-size:1.2em;font-weight:bolder;font-style:italic">`+newedit[l]+`</li><br><br></b>
+                   `
+               }
+                    
+           }
+           function errData(){
+             
+           }
         //   function showProgramme(data) {
 
         //     var sc =data.val();
